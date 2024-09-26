@@ -12,11 +12,11 @@ import HeaderSection from "./HeaderSection/HeaderSection";
 import FooterSection from "./FooterSection/FooterSection";
 import InvestingBox from "./InvestingBox/InvestingBox";
 import StakingComponent from "./StakingComponent/StakingComponent";
-import SwapComponent from "./SwapComponent/SwapComponent";
 import AddLiquidity from "./AddLiquidity/AddLiquidity";
 import TokenSelector from "./TokenSelector/TokenSelector";
 import BodyContent from "./BodyContent/BodyContent";
 import Staking from "./Staking/Staking";
+import SwapBodyContent from "./Swap/SwapBodyContent";
 
 export {
   HeroSection,
@@ -29,7 +29,6 @@ export {
   MainPage,
   InvestingBox,
   StakingComponent,
-  SwapComponent,
   PoolAdd,
   PoolConnect,
   HeaderSection,
@@ -37,7 +36,8 @@ export {
   AddLiquidity,
   TokenSelector,
   BodyContent,
-  Staking
+  Staking,
+  SwapBodyContent
 };
 
 // This code has allowed us to run our application or front end interface by importing and exporting components

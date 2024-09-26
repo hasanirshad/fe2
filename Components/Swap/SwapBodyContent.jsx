@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./BodyContent.module.css";
+import styles from "../BodyContent/BodyContent.module.css";
 import { FaCog } from "react-icons/fa"; // Importing a settings icon from react-icons
 //imported from the components we created
 import {
@@ -10,14 +10,12 @@ import {
     Staking
   } from "../";
 
-const BodyContent = () => {
+const SwapBodyContent = () => {
   const [activeTab, setActiveTab] = useState("pool");
   const [showSettings, setShowSettings] = useState(false); // State to handle the popup visibility
 
   const renderContent = () => {
     switch (activeTab) {
-    case "pool":
-        return <PoolAdd></PoolAdd>;  
     case "swap":
         return <Swap></Swap>;
     case "stake":
@@ -36,22 +34,16 @@ const BodyContent = () => {
       {/* Tabs */}
       <div className={styles.tabs}>
         <button
-          className={activeTab === "pool" ? styles.activeTab : styles.tab}
-          onClick={() => setActiveTab("pool")}
-        >
-          Pool
-        </button>
-        <button
           className={activeTab === "swap" ? styles.activeTab : styles.tab}
           onClick={() => setActiveTab("swap")}
         >
           Swap
         </button>
         <button
-          className={activeTab === "stake" ? styles.activeTab : styles.tab}
-          onClick={() => setActiveTab("stake")}
+          className={activeTab === "stack" ? styles.activeTab : styles.tab}
+          onClick={() => setActiveTab("stack")}
         >
-          Stake
+          Stack
         </button>
         <button
           className={activeTab === "buy" ? styles.activeTab : styles.tab}
@@ -65,6 +57,7 @@ const BodyContent = () => {
         >
           Sell
         </button>
+        
 
         {/* Settings Button */}
         <button
@@ -94,4 +87,4 @@ const BodyContent = () => {
   );
 };
 
-export default BodyContent;
+export default SwapBodyContent;
