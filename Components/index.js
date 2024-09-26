@@ -17,6 +17,7 @@ import AddLiquidity from "./AddLiquidity/AddLiquidity";
 import TokenSelector from "./TokenSelector/TokenSelector";
 import BodyContent from "./BodyContent/BodyContent";
 import Staking from "./Staking/Staking";
+import SendComponent from "./SendComponent/SendComponent";
 
 export {
   HeroSection,
@@ -37,6 +38,7 @@ export {
   AddLiquidity,
   TokenSelector,
   BodyContent,
+  SendComponent,
   Staking
 };
 
