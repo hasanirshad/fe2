@@ -3,8 +3,8 @@ import styles from "./Staking.module.css";
 import { ethers } from "ethers";
 import StakingABI from "../../artifacts/contracts/ETFStaking.sol/ETFStaking.json";
 import Image from "next/image";
-// import USDTImage from "../../Assets/usdt.png";
-// import ETFSwapImage from "../../Assets/etfswap2.png";
+import USDTImage from "../../Assets/usdt.png";
+import ETFSwapImage from "../../Assets/etfswap2.png";
 
 const Staking = ({ provider }) => {
   const [stakeTokenAddress, setStakeTokenAddress] = useState("");
@@ -61,8 +61,8 @@ const Staking = ({ provider }) => {
         <div className={styles.left}>
           <label htmlFor="stakeToken">
             Stake USDT &nbsp;
-            {/*<Image src={USDTImage} height={24}></Image>*/}
-            <Image  height={24}></Image>
+            <Image src={USDTImage} height={24}></Image>
+            {/*<Image  height={24}></Image>*/}
           </label>
           {/* <input
           type="text"
@@ -77,8 +77,8 @@ const Staking = ({ provider }) => {
         <div className={styles.right}>
           <label htmlFor="rewardToken">
             Rewards in ETFs &nbsp;
-            {/*<Image src={ETFSwapImage} height={24}></Image>*/}
-            <Image height={24}></Image>
+            <Image src={ETFSwapImage} height={24}></Image>
+          {/*<Image height={24}></Image>*/}
           </label>
           {/* <input
           type="text"
