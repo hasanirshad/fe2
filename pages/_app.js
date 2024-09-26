@@ -14,7 +14,10 @@ import {
   StakingComponent,
   PoolAdd,
   FooterSection,
-  BodyContent
+  BodyContent,
+  SwapBodyContent,
+  Swap,
+  SwapTokenInfo
 } from "../Components/index";
 
 const MyApp = ({ Component, pageProps }) => {
@@ -27,7 +30,7 @@ const MyApp = ({ Component, pageProps }) => {
       
   {/* <MainPage></MainPage>  */}
   <BodyContent></BodyContent>
-
+  <SwapBodyContent></SwapBodyContent>
       {/* -- POOL -- AddLiquidity and PoolAdd for same purpose. Pool add is custom built and AddLiquidity is AI built. Decide which one is better */}
        {/*<PoolAdd /> */}
       {/* POOL--Dropdown -- Toke selector is drop dow to open for searching the tokens in Add Liquidity component */}

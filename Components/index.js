@@ -17,6 +17,11 @@ import AddLiquidity from "./AddLiquidity/AddLiquidity";
 import TokenSelector from "./TokenSelector/TokenSelector";
 import BodyContent from "./BodyContent/BodyContent";
 import Staking from "./Staking/Staking";
+import SwapBodyContent from "../Components/Swap/SwapBodyContent";
+import Swap from "../Components/Swap/Swap";
+import SwapTokenInfo from "../Components/Swap/SwapTokenInfo";
+
+
 
 export {
   HeroSection,
@@ -37,7 +42,10 @@ export {
   AddLiquidity,
   TokenSelector,
   BodyContent,
-  Staking
+  Staking,
+  SwapBodyContent,
+  Swap,
+  SwapTokenInfo
 };
 
 // This code has allowed us to run our application or front end interface by importing and exporting components
