@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styles from "./BodyContent.module.css";
+import { SendComponent } from "../";
+ import BuyComponent from "../BuyComponent/BuyComponent";
 import { FaCog } from "react-icons/fa"; // Importing a settings icon from react-icons
 //imported from the components we created
 import {
@@ -22,10 +24,10 @@ const BodyContent = () => {
         return <SwapComponent></SwapComponent>;
     case "stake":
         return <Staking></Staking>;
-    case "buy":
-        return <SwapComponent>Buy Content</SwapComponent>;
-    case "sell":
-        return <SwapComponent>Sell Content</SwapComponent>;
+    case "Send":
+        return <SendComponent>Send Content</SendComponent>;
+    case "Buy":
+        return <BuyComponent>Buy Content</BuyComponent>;
     default:
         return <div>Swap Content</div>;
     }
@@ -54,16 +56,16 @@ const BodyContent = () => {
           Stake
         </button>
         <button
-          className={activeTab === "buy" ? styles.activeTab : styles.tab}
-          onClick={() => setActiveTab("buy")}
+          className={activeTab === "Send" ? styles.activeTab : styles.tab}
+          onClick={() => setActiveTab("Send")}
         >
-          Buy
+          Send
         </button>
         <button
-          className={activeTab === "sell" ? styles.activeTab : styles.tab}
-          onClick={() => setActiveTab("sell")}
+          className={activeTab === "Buy" ? styles.activeTab : styles.tab}
+          onClick={() => setActiveTab("Buy")}
         >
-          Sell
+          Buy
         </button>
 
         {/* Settings Button */}
