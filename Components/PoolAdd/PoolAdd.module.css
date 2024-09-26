@@ -187,6 +187,7 @@
 .PoolAdd_box_price_right_range {
     display: flex; /* Adjust for horizontal layout */
     gap: 1.5rem; /* Increased gap */
+    justify-content: center;
 }
 
 .PoolAdd_box_price_right_range_box {

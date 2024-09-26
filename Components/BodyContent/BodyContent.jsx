@@ -6,7 +6,8 @@ import {
     AddLiquidity,
     SwapComponent,
     StakingComponent,
-    PoolAdd
+    PoolAdd,
+    Staking
   } from "../";
 
 const BodyContent = () => {
@@ -20,7 +21,7 @@ const BodyContent = () => {
     case "swap":
         return <SwapComponent></SwapComponent>;
     case "stake":
-        return <StakingComponent></StakingComponent>;
+        return <Staking></Staking>;
     case "buy":
         return <SwapComponent>Buy Content</SwapComponent>;
     case "sell":

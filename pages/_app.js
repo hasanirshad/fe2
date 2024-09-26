@@ -35,9 +35,8 @@ const MyApp = ({ Component, pageProps }) => {
       
       {/* --SWAP-- Component is same as SwapComponent, let see which one we can better fit with less efforts */}
       {/* <Component {...pageProps} /> */}
-      <SwapComponent {...pageProps} />
 
-      <StakingComponent />
+      {/*<Staking />*/}
       <FooterSection />
     </div>
   );

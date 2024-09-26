@@ -1,0 +1,128 @@
+.stakingContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(30, 30, 73, 0.92);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 155px;
+  margin-bottom: 100px;
+  color: rgba(255, 255, 255, 0.8);
+  font: 24px Outfit, sans-serif;
+  /* text-transform: uppercase; */
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(30, 30, 73, 0.92);
+  border: 1px solid var(--Secondary-color, #162a69);
+  overflow: hidden;
+  position: relative;
+  min-height: 528px;
+  width: 100%;
+  padding: 24px 20px 6px;
+  font: 500 16px/28px Inter, -apple-system, Roboto, Helvetica, sans-serif;
+}
+.left {
+  margin-left: 105px;
+  display: flex;
+  flex-grow: 1;
+  justify-content: right;
+  position: absolute;
+  font: 500 16px/28px Inter, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.right {
+  display: flex;
+  left: 300px;
+  margin-top: 0px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  justify-content: right;
+  position: absolute;
+  font: 500 16px/28px Inter, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.title {
+  font: 500 16px/28px Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+  font: 500 16px/28px Inter, -apple-system, Roboto, Helvetica, sans-serif;
+}
+.formGroupFirstField {
+  font: 500 16px/28px Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  margin-top: 65px;
+  margin-bottom: 15px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #08b0e3;
+  color: #162a69;
+  margin: 5px 0px 20px 5px;
+  border-width: 1px;
+  border-color: #164269;
+  border-style: outset;
+}
+
+.radioInput {
+  gap: 16px;
+  &:hover {
+    color: skyblue; /* Light blue color */
+  }
+  border: 1px solid var(--Secondary-color, #162a69);
+  border-right: 1px solid #03b0f4; /* Darker blue border */
+  padding: 8px;
+  border: 0px;
+  width: 15%;
+  height: 2em;
+  margin: 15px 0px 0px 5px;
+  /* margin-left: 5px; */
+}
+
+.checkbox {
+  margin-left: 10px;
+  border: 0px;
+  width: 15%;
+  height: 2em;
+  margin: 15px 0px 0px 5px;
+}
+
+.stakeButton {
+  background-color: rgba(30, 30, 73, 0.92);
+  width: 100%;
+  padding: 10px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+  border-width: 1px;
+  border-color: #164269;
+  border-style: outset;
+}
+
+.stakeButton:hover {
+  /* background-color: rgb(3, 3, 57); */
+  color: skyblue;
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ff4f4f;
+  text-align: center;
+}

@@ -103,9 +103,10 @@ const PoolAdd = ({ setClosePool, tokenData, createLiquidityAndPool }) => {
         <div className={Style.PoolAdd_box_price}>
           {/* //LEFT */}
           <div className={Style.PoolAdd_box_price_left}>
-            <h4>Select Pair</h4>
+            {/*<h4>Select Pair</h4>*/}
             <div className={Style.PoolAdd_box_price_left_token}>
-              <div
+            <h4>Select Pair</h4>
+            <div
                 className={Style.PoolAdd_box_price_left_token_info}
                 onClick={() => setOpenTokenModelOne(false)}
               >
@@ -135,6 +136,7 @@ const PoolAdd = ({ setClosePool, tokenData, createLiquidityAndPool }) => {
                 <p>{tokenTwo.name || "Select"}</p>
                 <p>🡫</p>
               </div>
+                
             </div>
             {/* //FEE */}
             <div className={Style.PoolAdd_box_price_left_fee}>

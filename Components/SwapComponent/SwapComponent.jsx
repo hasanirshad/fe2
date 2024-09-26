@@ -7,7 +7,7 @@ const navItems = ['Swap', 'Stake', 'Buy', 'Sell'];
 const SwapComponent = () => {
   return (
     <main className={styles.swapContainer}>
-      <nav className={styles.navBar}>
+      {/*<nav className={styles.navBar}>
         {navItems.map((item, index) => (
           <div key={index} className={index === 0 ? styles.activeNavItem : ''}>
             {item}
@@ -18,9 +18,9 @@ const SwapComponent = () => {
           alt="Settings" 
           className={styles.settingsIcon} 
         />
-      </nav>
+        </nav>
       
-      <hr className={styles.divider} />
+      <hr className={styles.divider} />*/}
       
       <section className={styles.swapSection}>
         <img 
