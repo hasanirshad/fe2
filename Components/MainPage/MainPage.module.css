@@ -1,0 +1,365 @@
+.mainPageFlexContainer {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  max-height: 40rem;
+}
+/* Pathner */
+.MainPage_Pathner {
+  transform: scale(70%) translate(-5rem, -4.5rem);
+  opacity: 15%;
+  position: absolute;
+  z-index: 0;
+}
+
+/* The color Effect */
+.MainPage_Pathner_ColorGradient {
+  transform: translate(0rem, 0rem);
+  opacity: 60%;
+  position: absolute;
+}
+
+.mainPageFlexContainerBG {
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+}
+
+.left {
+  display: flex;
+  flex-grow: 1;
+}
+
+.right {
+  display: flex;
+  flex-shrink: 0;
+  @media (min-width: 768px) {
+    justify-content: flex-end;
+  }
+  margin-top: 8px;
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
+}
+
+.mainPageFunctionsContainer {
+  display: flex;
+  position: relative;
+  min-height: 40rem;
+}
+
+.MainPage_MainPictures {
+  display: flex;
+  position: relative;
+}
+
+/* Orange Ball */
+.LineRisingLeft {
+  width: 2px;
+  transform: translate(1rem, 10rem);
+  left: 8.65rem;
+  position: absolute;
+  z-index: 0;
+}
+.MainPage_MainPictures_OrangeBall {
+  transform: scale(80%) translate(0rem, 37rem);
+  left: 8.6rem;
+  position: absolute;
+  z-index: 1;
+}
+.MainPage_MainPictures_OrangeShadow {
+  transform: scale(80%) translate(0rem, 36.8rem);
+  left: 8.8rem;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Purple Ball */
+.LineRisingRight {
+  width: 2px;
+  transform: translate(1rem, 12rem);
+  left: 68rem;
+  position: absolute;
+  z-index: 0;
+}
+.MainPage_MainPictures_PurpleBall {
+  transform: scale(80%) translate(0rem, 19.2rem);
+  left: 68rem;
+  position: absolute;
+  z-index: 1;
+}
+.MainPage_MainPictures_PurpleShadow {
+  transform: scale(80%) translate(0rem, 19rem);
+  left: 68.15rem;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Main Box */
+.MainPage_MainHeadingLine {
+  display: flex;
+  left: 16rem;
+  transform: translate(0rem, -15rem);
+  position: relative;
+}
+
+/* Buttons in the Main box */
+.MainPage_MainHeadingLine_Items {
+  display: flex;
+  align-items: center;
+  gap: 7rem;
+  cursor: pointer;
+  font-size: larger;
+  padding-left: 5rem;
+}
+
+/* Hover effect for items in the Main box */
+.MainPage_MainHeadingLine_Items :hover {
+  color: #0892d0;
+}
+
+.active {
+  color: #0892d0;
+}
+
+/* The Activation Sign (Blue Ball) */
+.MainPage_MainHeadingLine_Items_ActiveButtonBall {
+  position: absolute;
+  align-items: center;
+  transform: translate(0%, 0%);
+  padding: 0;
+  margin: 0;
+}
+
+/* The image of Settings */
+.MainPage_MainHeadingLine_Items_Settings {
+  transform: translate(25rem, 4.3rem);
+  cursor: pointer;
+  position: relative;
+}
+
+/* The Separating Line */
+.MainPage_MainHeadingLine_SeparatorLine {
+  display: flex;
+  transform: translate(4rem, 7.1rem);
+  height: 1rem;
+  position: absolute;
+  left: 10rem;
+}
+
+/* Main container for the Token modal */
+.MainPage_Token {
+  display: flex;
+  position: relative;
+  margin-top: 5rem;
+  margin-left: 5rem;
+}
+
+/* Box containing the modal content */
+.MainPage_Token_Box {
+  background-color: #1e1e49; /* Dark background color, similar to previous codes */
+  border-radius: 12px; /* Rounded corners */
+  padding: 20px;
+  transform: translate(5%, 5%);
+  width: 400px;
+  z-index: 99999;
+  max-width: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  color: #ffffff; /* White text color */
+  position: absolute; /* Position relative to allow absolute positioning of the close button */
+}
+
+/* Header section containing the title */
+.Token_Box_Heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.Token_Box_Heading h4 {
+  margin: 0rem;
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.MainPage_Token_Box_Heading4 {
+  margin-top: 2.2rem;
+  font-size: 17px;
+  color: #ffffff;
+}
+
+/* Styles for the close button image */
+.Token_Box_Heading img {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  right: 50%; /* Center horizontally */
+  transform: translate(
+    355%,
+    -340%
+  ); /* Move half the width and height to be out and in the box */
+  z-index: 11111111111; /* Extremely high z-index to ensure it appears above other elements */
+  width: 50;
+  height: 50px;
+  border-radius: 50%; /* Make the close button circular */
+  background-color: #1e1e49; /* Black background for the close button */
+  cursor: pointer;
+}
+
+/* Paragraph styles for informational text */
+.Token_box_para {
+  font-size: 14px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+.Token_box_para_1 {
+  font-size: 14px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.Token_box_para h2 {
+  font-size: 14px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.Token_box_para img {
+  margin-left: 10px;
+}
+
+.Token_box_para_1 img {
+  margin-left: 10px;
+}
+
+/* Input container styles */
+.Token_Box_Input {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  border: 1px solid #1e1e49;
+}
+
+.Token_Box_Input button,
+.Token_Box_Input input {
+  background-color: #1e1e49; /* Slightly lighter dark background for input fields */
+  border: 1px solid #162a69; /* Border color to differentiate input fields */
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.Toggle_Checkbox {
+  display: none;
+}
+
+/* Primary button styles */
+.Token_Box_Input button {
+  background-color: #1e1e49; /* Primary button color */
+  color: #ffffff; /* Black text color for contrast */
+  font-weight: bold; /* Bold text */
+}
+
+.Token_Box_Input button:hover {
+  background-color: #0892d0; /* Color on hover */
+}
+
+.Token_Box_Input button:active {
+  background-color: #0892d0; /* Color on pressed */
+}
+
+/* Styles for the "Interface Setting" section header */
+.Token_Box_Toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.Token_Box_Toggle p {
+  margin: 0;
+}
+
+/* Media Query for Small Screens */
+@media only screen and (max-width: 768px) {
+  .MainPage_MainHeadingLine {
+    transform: translate(0%, 0%);
+  }
+
+  .MainPage_Pathner {
+    margin-top: 0rem;
+    transform: translate(0%, 0%);
+  }
+
+  .MainPage_Pathner_ColorGradient {
+    margin-top: 5rem;
+    transform: translate(0%, 0%);
+  }
+
+  .MainPage_MainPictures_CoinsFalling {
+    transform: translate(0%, 0%);
+  }
+
+  .MainPage_MainHeadingLine_Items {
+    gap: 2rem;
+    margin-left: 0;
+  }
+
+  .MainPage_MainHeadingLine_Items_Settings {
+    margin-left: 0;
+    transform: translate(0%, 0%);
+  }
+
+  .MainPage_MainHeadingLine_SeparatorLine {
+    margin-left: 0;
+    width: 80px;
+  }
+
+  .MainPage_MainPictures_OrangeRising {
+    transform: translate(0%, 0%);
+  }
+
+  .MainPage_MainPictures_PurpleRising {
+    transform: translate(0%, 0%);
+  }
+
+  .Token_Box {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .Token_Box_Heading img {
+    transform: translate(0%, 0%);
+    width: 40px;
+    height: 40px;
+  }
+
+  .Token_Box_Heading h4 {
+    font-size: 20px;
+  }
+
+  .Token_box_para {
+    font-size: 12px;
+  }
+
+  .Token_Box_Input button,
+  .Token_Box_Input input {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .HeroSection_Box_Separator_Box {
+    transform: translate(0%, 0%);
+  }
+
+  .HeroSection_Box_Separator_Arrow {
+    transform: translate(0%, 0%);
+  }
+}

@@ -1,0 +1,221 @@
+/* The Main container */
+.Model {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999999;
+}
+
+/* The main box */
+.Model_Box {
+  background-color: #1E1E49;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid #162A69;
+  width: 812px;
+  height: 867px;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 6rem;
+  margin-left: 30.05rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Add shadow effect */
+}
+
+/* The Heading of the Pop-up Menu */
+.Model_Box_Heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: -4rem;
+  padding-bottom: 1rem;
+  margin-top: -17.25rem;
+  margin-left: -2.1rem;
+  border: 1px solid #162A69;
+  border-radius: 10px;
+  width: 812px;
+  height: 133px;
+}
+
+/* The Subtitles */
+.Model_Box_Heading p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: -2rem;
+  margin-left: 3rem;
+}
+
+.Model_Box_Rectangle1{
+  margin-top: 9rem;
+  margin-left: 1rem;
+  opacity: 100%;
+  border: 1px solid #162A69;
+  height: 65px;
+  width: 708px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Close Button */
+.Model_Box_Heading_Img {
+  background-color: #1E1E49;
+  border-radius: 20px;
+  margin-right: 3rem;
+  margin-top: .5rem;
+  cursor: pointer;
+  z-index: 99999999;
+}
+
+.Model_Box_Para1_Img1{
+  transform: translate(1.5%, 150%);
+}
+
+.Model_Box_Para1_Img2{
+  transform: translate(60.5%, 55%);
+}
+
+.Model_Box_ArrowsUpDown{
+  transform: translate(56%, 70%);
+}
+
+.Model_Box_Rectangle1_Inner_RightArrow{
+  transform: translate(95%, -160%);
+}
+
+.Model_Box_Para1 {
+  margin-bottom: 12rem;
+  margin-top: -4rem;
+  margin-left: 1rem;
+}
+
+.Model_Box_Para1 p {
+  font-size: 1rem;
+  margin-top: -1rem;
+}
+
+.Model_Box_Para1_Arrows{
+  transform: translate(57%, 79%);
+}
+
+.Model_Box_Para1_Img3{
+  transform: translate(56%, -25%);
+}
+
+.Model_Box_Para2 {
+  margin-left: 18.5rem;
+  margin-top: -2.2rem;
+  font-size: larger;
+  font-weight: 400;
+  padding: 0rem;
+  margin-bottom: 2rem;
+}
+
+.Model_Box_Wallet {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of wallet items */
+  gap: 1rem; /* Add gap between items */
+  margin-left: .7rem;
+}
+
+.Model_Box_Wallet_Item {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between image and text */
+  background-color: #1E1B49;
+  padding: 0.5rem 1rem;
+  border-radius: 0rem;
+  color: #FFFFFF;
+  border: 1px solid #162A69;
+  font-weight: 400;
+  cursor: pointer;
+  width: calc(50% - 1rem); /* Ensure two items per line with gap */
+}
+
+.Model_Box_Active{
+  margin-left: -2rem;
+  transform: translate(0%, 30%);
+}
+
+.Model_Box_Para {
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  color: #666666;
+  text-align: center;
+}
+
+.Model_Box_Rectangle1_Inner{
+  margin-left: .2rem;
+  margin-top: -3.25rem;
+  height: 100px;
+  width: 696px;
+}
+
+.Model_Box_Rectangle1_Inner_Separator{
+ width: 1px;
+ height: 38px;
+ border: 1px solid #223B89;
+ transform: translate(4000%, 35%);
+}
+
+.Model_Box_Logo {
+  width: 1000px;
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  margin-left: -8rem;
+}
+
+/* Media Query for Small Screens */
+@media only screen and (max-width: 768px) {
+
+  .Model_Box {
+      width: 90%;
+      height: auto; /* Adjust height to fit content */
+      padding: 1.5rem;
+      margin-top: 5rem; /* Adjust margin for smaller screens */
+  }
+
+  .Model_Box_Heading {
+      width: 90%;
+      height: auto; /* Adjust height to fit content */
+      margin-left: 0;
+      margin-top: 0;
+      border-radius: 8px;
+  }
+
+  .Model_Box_Heading p {
+      font-size: 1.2rem;
+      margin-left: 0.5rem;
+  }
+
+  .Model_Box_Heading_Img {
+      width: 40px; /* Adjust size for smaller screens */
+      height: 40px; /* Adjust size for smaller screens */
+      margin-right: 0.5rem;
+      margin-top: 0.5rem;
+  }
+
+  .Model_Box_Para1 p {
+      font-size: 0.9rem;
+  }
+
+  .Model_Box_Para2 {
+      font-size: 1rem;
+      margin-left: 0.5rem;
+  }
+
+  .Model_Box_Wallet_Item {
+      width: calc(100% - 1rem); /* Full width for items on smaller screens */
+  }
+
+  .Model_Box_Para {
+      font-size: 0.8rem;
+  }
+
+  .Model_Box_Logo {
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+  }
+}

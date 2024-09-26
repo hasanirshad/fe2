@@ -1,0 +1,182 @@
+/* The main container */
+.HeroSection {
+  width: 50px;
+  /* transform: translate(-47%, -10%); */
+  /* margin: 2rem auto; */
+  margin-top: 0.5rem;
+  margin-left: 56.9rem;
+  display: flex;
+  /* background-color: #FFFFFF; */
+  align-items: center;
+  justify-content: center;
+  z-index: 999999999;
+}
+
+/* The first Box to enter the amount you need to swap */
+.HeroSection_Box {
+  margin-top: -50rem;
+  margin-left: -3.5rem;
+  background-color: #1e1e49;
+  width: 820px;
+  height: 172px;
+  top: 245px;
+  left: 310px;
+  gap: 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  z-index: 999999999;
+}
+
+/* The Second Box to enter the amount you need to swap */
+.HeroSection_Box_2 {
+  margin-top: 5rem;
+  background-color: #1e1e49;
+  width: 820px;
+  height: 172px;
+  top: 245px;
+  left: 310px;
+  gap: 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+}
+
+/* The Heading of the swap menu */
+.HeroSection_Box_Heading {
+  width: 34px;
+  height: 28px;
+  top: 269px;
+  left: 334px;
+  gap: 0px;
+  opacity: 0px;
+  transform: translate(90%, 90%);
+}
+
+/* The Subtitle of the Headings */
+.HeroSection_Box_Heading_2 {
+  width: 34px;
+  height: 28px;
+  top: 269px;
+  left: 334px;
+  gap: 0px;
+  opacity: 0px;
+  transform: translate(90%, 90%);
+}
+
+/* The Text And box for entering amount */
+.HeroSection_Box_Input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1e1e49eb;
+  color: #ffffff;
+  border-radius: 1rem;
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+
+/* The text */
+.HeroSection_Box_Input_1 {
+  color: #ffffff;
+  width: 24px;
+  height: 45px;
+  top: 313px;
+  left: 334px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Outfit;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 45.36px;
+  text-align: left;
+}
+
+/* Text #2 */
+.HeroSection_Box_Input_2 {
+  color: #ffffff;
+  width: 24px;
+  height: 45px;
+  top: 313px;
+  left: 334px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Outfit;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 45.36px;
+  text-align: left;
+}
+
+/* Text type */
+.HeroSection_Box_Input input {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
+
+/* Input Button */
+.HeroSection_Box_Input button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  line-height: 1rem;
+  background: #1e1e49eb;
+  border: 1px solid #162a69;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 0rem;
+  margin-right: -41.7rem;
+  margin-top: -1rem;
+  color: #ffffff;
+}
+
+/* Subtitles for better understanding */
+.HeroSection_Box_Input_Subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-right: 2rem;
+  margin-bottom: -4rem;
+}
+
+/* Second Subtitles */
+.HeroSection_Box_Input_Subtitle_1 {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-right: 2rem;
+  margin-bottom: -4rem;
+}
+
+/* The button to swap */
+.HeroSection_Box_btn {
+  background: #1e1e49eb;
+  border: 1px solid #162a69;
+  outline: 0;
+  color: #fff;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  font-size: 1.3rem;
+}
+
+/*Image container for the settings button */
+.HeroSection_Box_Heading_img {
+  cursor: pointer; /* Change cursor to pointer when hovering over the image */
+}
+
+/* Media Query for smaller Screens */
+@media only screen and (max-width: 35em) {
+  .HeroSection {
+    width: 95%;
+  }
+  .HeroSection_Box {
+    width: 95%;
+  }
+  .HeroSection_Box_Input input {
+    width: 50%;
+  }
+}

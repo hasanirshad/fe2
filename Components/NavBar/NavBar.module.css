@@ -1,0 +1,179 @@
+.NavBar {
+  background-color: #211f45; /* Background color for the NavBar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  /* padding: 0.17rem; */
+  /* Add gradient styles */
+  background: linear-gradient(to right, #1b3560, #1f204a);
+  
+  /* Add padding similar to Tailwind's pt-4 and px-6 or md:px-12 */
+  padding-top: 0.3rem; /* pt-4 */
+  padding-bottom: 0.3rem; /* pt-4 */
+  padding-left: 1.5rem; /* px-6 */
+  padding-right: 1.5rem; /* px-6 */
+  
+}
+
+.NavBar_Box {
+  display: flex;
+  width: 100%;
+  z-index: 9999999999999;
+}
+
+.NavBar_Box_logo {
+  margin-left: 1rem;
+  margin-right: 0rem;
+  margin-bottom: 0rem;
+}
+
+.NavBar_Box_left {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0rem;
+  margin-right: 0.5rem;
+}
+
+.NavBar_Box_left_Menu_Items {
+  display: flex;
+  margin-left: 3rem;
+  gap: 1rem;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.NavBar_Box_left_Menu_Item {
+  position: relative; /* Ensure that the ball can be positioned relative to this item */
+  margin-right: 15px;
+  color: #ffffff; /* Default color for menu items */
+  cursor: pointer;
+}
+
+.NavBar_Box_left_Menu_Item:hover {
+  color: #0892d0; /* Change color on hover */
+}
+
+.NavBar_Box_left_Menu_Item.active {
+  color: #0892d0; /* Color for active menu item */
+}
+
+.NavBar_Box_left_Menu_Item_ActiveBall {
+  position: absolute;
+  bottom: -0.6rem; /* Adjust this value based on the height of your button and ball size */
+  left: 50%; /* Center the ball horizontally under the button */
+  transform: translateX(-50%); /* Center the ball horizontally */
+  width: 19px;
+  height: 11px;
+  display: none; /* Initially hidden */
+}
+
+.NavBar_Box_left_Menu_Item.active .NavBar_Box_left_Menu_Item_ActiveBall {
+  display: block; /* Show the ball when the item is active */
+}
+
+.NavBar_Box_Separator {
+  width: 1px;
+  height: 30px;
+  background-color: #162a69; /* Separator color */
+  margin: 0 15px;
+  background: linear-gradient(
+    270deg,
+    #1c1a42 0%,
+    rgba(255, 255, 255, 0.75) 50%,
+    #1c1a42 100%
+  );
+  margin-right: 5rem;
+  margin-top: 0.45rem;
+  margin-left: -0.5rem;
+  left: 987px;
+}
+
+.NavBar_Box_Right {
+  display: flex;
+  align-items: center;
+}
+
+.NavBar_Box_Right_img {
+  margin-right: 3rem;
+  margin-top: 0.35rem;
+}
+
+.NavBar_Box_Right_Account button {
+  background-color: #211f45;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 19.5px;
+  font-weight: 300;
+  margin-top: 0.1rem;
+}
+
+/* Styles for the "Login" button */
+.NavBar_Box_Right_Login button {
+  background-color: #211f45;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  border-radius: 19.5px;
+  width: 83px;
+  height: 28px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: -2rem; /* Adjusted margins for better layout */
+  font-weight: 300;
+  transform: translate(0%, 3%);
+}
+
+/* Styles for the "Sign Up" button */
+.NavBar_Box_Right_Signup button {
+  background-color: #211f45;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  border-radius: 19.5px;
+  width: 83px;
+  height: 28px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 0.5rem; /* Adjusted margins for better layout */
+  font-weight: 300;
+  transform: translate(0%, 3%);
+}
+
+/* Button hover effect */
+.NavBar_Box_Right_Login button:hover,
+.NavBar_Box_Right_Signup button:hover {
+  background-color: #0892d0;
+}
+
+/* Permanent background color change when clicked */
+.NavBar_Box_Right_Login button.active,
+.NavBar_Box_Right_Signup button.active {
+  background-color: #0892d0;
+}
+
+/* Media query for responsive design */
+@media only screen and (max-width: 768px) {
+  .NavBar {
+    width: 100%;
+    padding: 10px; /* Adjusted padding for smaller screens */
+  }
+  .NavBar_Box {
+    flex-direction: column; /* Stack elements vertically on small screens */
+  }
+  .NavBar_Box_left_Menu_Items {
+    flex-direction: column; /* Stack menu items vertically on small screens */
+    margin-left: 0; /* Remove left margin */
+  }
+  .NavBar_Box_Right {
+    flex-direction: column; /* Stack right section items vertically on small screens */
+    align-items: flex-start; /* Align items to start for better layout */
+  }
+  .NavBar_Box_Right_Login,
+  .NavBar_Box_Right_Signup {
+    margin-left: 0; /* Remove left margin for buttons */
+    margin-right: 0; /* Remove right margin for buttons */
+    margin-top: 1rem; /* Add top margin for spacing between buttons */
+  }
+}

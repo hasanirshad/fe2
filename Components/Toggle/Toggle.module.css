@@ -1,0 +1,92 @@
+/* Container for the toggle switch */
+.Toggle {
+  text-align: center;
+}
+
+/* Outer box of the toggle switch */
+.Toggle_Switch_Box {
+  position: relative;
+  width: 75px;
+  display: inline-block;
+  text-align: left;
+  top: 8px;
+  background-color: #1e1e49;
+}
+
+/* Checkbox input (hidden) */
+.Toggle_Checkbox {
+  display: none;
+}
+
+/* Label for the toggle switch, acts as the clickable area */
+.Toggle_Label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #FFFFFF; /* Updated border color */
+  border-radius: 25px;
+}
+
+/* Inner part of the toggle switch, handles the sliding effect */
+.Toggle_Inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  color: #162A69;
+  transition: margin 0.4s ease-in 0s;
+}
+
+/* Text inside the toggle switch */
+.Toggle_Inner:before,
+.Toggle_Inner:after {
+  float: left;
+  width: 50%;
+  height: 36px;
+  padding: 0;
+  line-height: 36px;
+  color: #FFFFFF;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+/* 'Yes' text style and background color */
+.Toggle_Inner:before {
+  content: "Yes";
+  padding-left: 10px;
+  background-color: #0892D0;
+  color: #FFFFFF;
+}
+
+/* 'No' text style and background color */
+.Toggle_Inner:after {
+  content: "No";
+  padding-right: 10px;
+  background-color: #162A69;
+  color: #FFFFFF; 
+  text-align: right;
+}
+
+/* Switch handle style */
+.Toggle_Switch {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 5px;
+  background-color: #001447;
+  position: absolute;
+  top: .2rem;
+  bottom: 0;
+  right: 38px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+}
+
+/* When checkbox is checked, move the inner content */
+.Toggle_Checkbox:checked + .Toggle_Label .Toggle_Inner {
+  margin-left: 0;
+}
+
+/* When checkbox is checked, move the switch handle */
+.Toggle_Checkbox:checked + .Toggle_Label .Toggle_Switch {
+  right: 0;
+}

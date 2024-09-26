@@ -1,0 +1,93 @@
+/* Container for the TokenList component */
+.TokenList {
+  position: absolute; /* Positioning relative to the nearest positioned ancestor */
+  width: 30rem; /* Set a fixed width for the token list */
+  height: 45rem;
+  border-radius: .6rem; /* Rounded corners for the container */
+  background-color: #1E1E49; /* Background color of the container */
+  /* Positioning */
+  top: 6rem; /* Distance from the top of the view */
+  right: 3rem; /* Distance from the right edge of the view */
+  padding: 1rem;
+  border: 1px solid #162A69;
+}
+
+/* Title section of the TokenList */
+.TokenList_Title_box {
+ width: 30rem;
+ height: 5rem;
+ border-radius: .6rem;
+ border: 1px solid #162A69;
+ margin-top: -3.85rem;
+ margin-left: -1rem;
+}
+.TokenList_Title_h2{
+  margin-left: 6rem;
+  margin-top: 1.45rem;
+}   
+
+.TokenList_Title_img{
+  margin-left: 1.5rem;
+}
+
+/* metamask logo */
+.TokenList_Title_img2{
+  margin-top: -1.05rem;
+  margin-left: 3rem;
+}
+
+/* Close button inside the TokenList */
+.TokenList_close {
+  position: absolute;
+  right: 4rem;
+  background-color: #1E1E49;
+  cursor: pointer; /* Change cursor to pointer to indicate clickable */
+  top: 2rem;
+  z-index: 1111111111;
+  border-radius: 20rem; 
+  transform: translate(25%, -20%);
+}
+
+/* Settings button */
+.TokenList_Title_img3{
+  margin-left: 21rem;
+  margin-top: -2.55rem;
+}
+
+.TokenList_Box_Buy_Heading{
+  margin-left: 2.4rem;
+  margin-top: 3rem;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.TokenList_Box_Buy{
+  border: 1px solid #162A69;
+  width: 222px;
+  height: 118px;
+  top: 201px;
+  left: 60px;
+  gap: 0px;
+  border-radius: 8px 0px 0px 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+}
+
+@media only screen and (max-width: 35em) {
+  .TokenList {
+      margin-left: -0rem;
+      width: 90%;
+  }
+  .TokenList_close {
+      right: 2rem;
+  }
+  .NavBar_Box_Middle {
+      display: none; /* Hide middle section on small screens */
+  }
+  .NavBar_Box_left_Menu {
+      display: none; /* Hide menu items on small screens */
+  }
+  .NavBar_Box_Right_Box {
+      display: none; /* Hide right section on small screens */
+  }
+}
