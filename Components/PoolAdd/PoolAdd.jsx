@@ -14,6 +14,7 @@ const PoolAdd = ({ setClosePool, tokenData, createLiquidityAndPool }) => {
   const [openModel, setOpenModel] = useState(false);
   const [openTokenModelOne, setOpenTokenModelOne] = useState(false);
   const [openTokenModelTwo, setOpenTokenModelTwo] = useState(false);
+  const [openTokenModelThree, setOpenTokenModelThree] = useState(false);
   const [active, setActive] = useState(1);
   const [openFee, setOpenFee] = useState(false);
   const [minPrice, setMinPrice] = useState(0);
@@ -138,7 +139,7 @@ const PoolAdd = ({ setClosePool, tokenData, createLiquidityAndPool }) => {
             {/* //FEE */}
             <div className={Style.PoolAdd_box_price_left_fee}>
               <div className={Style.PoolAdd_box_price_left_fee_left}>
-                <h4>Fee teir</h4>
+                <h4 Style="line-height: 2.5;">Fee teir</h4>
                 <p>The % you will earn in fees</p>
               </div>
               {openFee ? (
@@ -183,42 +184,8 @@ const PoolAdd = ({ setClosePool, tokenData, createLiquidityAndPool }) => {
                 ))}
               </div>
             )}
-
-            {/* //DEPOSIT AMOUNT */}
-            <div className={Style.PoolAdd_box_deposit}>
-              <h4>Deposit Amount</h4>
-
-              <div className={Style.PoolAdd_box_deposit_box}>
-                <input
-                  type="number"
-                  placeholder={tokenOne.tokenBalance.slice(0, 9)}
-                  onChange={(e) => setTokenAmountOne(e.target.value)}
-                />
-                <div className={Style.PoolAdd_box_deposit_box_input}>
-                  <p>
-                    <small>{tokenOne.name || "ETH"}</small> {""}{" "}
-                    {tokenOne.symbol || "Ether"}
-                  </p>
-                </div>
-              </div>
-
-              <div className={Style.PoolAdd_box_deposit_box}>
-                <input
-                  type="number"
-                  placeholder={tokenTwo.tokenBalance.slice(0, 9)}
-                  onChange={(e) => setTokenAmountTwo(e.target.value)}
-                />
-                <div className={Style.PoolAdd_box_deposit_box_input}>
-                  <p>
-                    <small>{tokenTwo.name || "ETH"}</small> {""}{" "}
-                    {tokenTwo.symbol || "Select"}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* RIGHT */}
-          <div className={Style.PoolAdd_box_price_right}>
+            {/* RIGHT */}
+          {openFee && (<div className={Style.PoolAdd_box_price_right}>
             <h4>Set Price Range</h4>
             <div className={Style.PoolAdd_box_price_right_box}>
               <p className={Style.PoolAdd_box_price_right_box_para}>
@@ -265,26 +232,60 @@ const PoolAdd = ({ setClosePool, tokenData, createLiquidityAndPool }) => {
             </div>
 
             {/* BUTTON */}
+          </div>)}
+            {/* //DEPOSIT AMOUNT */}
+            <div className={Style.PoolAdd_box_deposit}>
+              <h4>Deposit Amount</h4>
 
-            <div className={Style.PoolAdd_box_price_right_amount}>
-              <button
-                onClick={() =>
-                  createLiquidityAndPool({
-                    tokenAddress0: tokenOne.tokenAddress.tokenAddress,
-                    tokenAddress1: tokenTwo.tokenAddress.tokenAddress,
-                    fee: fee,
-                    tokenPrice1: minPrice,
-                    tokenPrice2: maxPrice,
-                    slippage: slippage,
-                    deadline: deadline,
-                    tokenAmmountOne: tokenAmountOne,
-                    tokenAmmountTwo: tokenAmountTwo,
-                  })
-                }
-              >
-                Add Liquidity
-              </button>
+              <div className={Style.PoolAdd_box_deposit_box}>
+                <input
+                  type="number"
+                  placeholder={tokenOne.tokenBalance.slice(0, 9)}
+                  onChange={(e) => setTokenAmountOne(e.target.value)}
+                />
+                <div className={Style.PoolAdd_box_deposit_box_input}>
+                  <p>
+                    <small>{tokenOne.name || "ETH"}</small> {""}{" "}
+                    {tokenOne.symbol || "Ether"}
+                  </p>
+                </div>
+              </div>
+
+              <div className={Style.PoolAdd_box_deposit_box}>
+                <input
+                  type="number"
+                  placeholder={tokenTwo.tokenBalance.slice(0, 9)}
+                  onChange={(e) => setTokenAmountTwo(e.target.value)}
+                />
+                <div className={Style.PoolAdd_box_deposit_box_input}
+                onClick={ () => setOpenTokenModelThree(!openTokenModelThree)}>
+                  <p>
+                    <small>{tokenTwo.name || "ETH"}</small> {""}{" "}
+                    {tokenTwo.symbol || "Select"}
+                  </p>
+                </div>
+              </div>
             </div>
+            {/*Add liquidity Button*/}
+            <div className={Style.PoolAdd_box_price_right_amount}>
+            <button
+              onClick={() =>
+                createLiquidityAndPool({
+                  tokenAddress0: tokenOne.tokenAddress.tokenAddress,
+                  tokenAddress1: tokenTwo.tokenAddress.tokenAddress,
+                  fee: fee,
+                  tokenPrice1: minPrice,
+                  tokenPrice2: maxPrice,
+                  slippage: slippage,
+                  deadline: deadline,
+                  tokenAmmountOne: tokenAmountOne,
+                  tokenAmmountTwo: tokenAmountTwo,
+                })
+              }
+            >
+              Add Liquidity
+            </button>
+          </div>
           </div>
         </div>
       </div>
@@ -300,8 +301,15 @@ const PoolAdd = ({ setClosePool, tokenData, createLiquidityAndPool }) => {
         </div>
       )}
       {openTokenModelTwo && (
+        <div Style="margin-top: -66%;margin-left: 31%;">
           <TokenSelector></TokenSelector>
-      )}
+          </div>
+          )}
+      {openTokenModelThree && (
+        <div Style="margin-top: 37%;margin-left: 16%;">
+        <TokenSelector></TokenSelector>
+        </div>
+    )}
     </div>
   );
 };

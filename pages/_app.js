@@ -29,7 +29,7 @@ const MyApp = ({ Component, pageProps }) => {
   <BodyContent></BodyContent>
 
       {/* -- POOL -- AddLiquidity and PoolAdd for same purpose. Pool add is custom built and AddLiquidity is AI built. Decide which one is better */}
-       <PoolAdd /> 
+       {/*<PoolAdd /> */}
       {/* POOL--Dropdown -- Toke selector is drop dow to open for searching the tokens in Add Liquidity component */}
       {/*<TokenSelector></TokenSelector>*/}
       
