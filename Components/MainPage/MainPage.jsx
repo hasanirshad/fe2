@@ -7,6 +7,14 @@ import Style from "./MainPage.module.css";
 import Image from "next/image";
 // Importing Next.js's Image component for optimized image rendering
 
+//imported from the components we created
+import {
+  AddLiquidity,
+  SwapComponent,
+  StakingComponent,
+  PoolAdd
+} from "../";
+
 import HeroSection from "../../Components/HeroSection/HeroSection";
 // Importing the HeroSection component from the specified path
 

@@ -8,7 +8,7 @@ import etherlogo from "../../Assets/etherlogo.png";
 import trade1 from "../../Assets/trade1.png";
 import wallet from "../../Assets/Wallet.png";
 import Style from "./PoolAdd.module.css";
-import { Token, SearchToken } from "../../Components/index.js";
+import { Token, SearchToken, TokenSelector } from "../../Components/index.js";
 
 const PoolAdd = ({ setClosePool, tokenData, createLiquidityAndPool }) => {
   const [openModel, setOpenModel] = useState(false);
@@ -106,7 +106,7 @@ const PoolAdd = ({ setClosePool, tokenData, createLiquidityAndPool }) => {
             <div className={Style.PoolAdd_box_price_left_token}>
               <div
                 className={Style.PoolAdd_box_price_left_token_info}
-                onClick={() => setOpenTokenModelOne(true)}
+                onClick={() => setOpenTokenModelOne(false)}
               >
                 <p>
                   <Image
@@ -121,7 +121,7 @@ const PoolAdd = ({ setClosePool, tokenData, createLiquidityAndPool }) => {
               </div>
               <div
                 className={Style.PoolAdd_box_price_left_token_info}
-                onClick={() => setOpenTokenModelTwo(true)}
+                onClick={() => setOpenTokenModelTwo(!openTokenModelTwo)}
               >
                 <p>
                   <Image
@@ -299,24 +299,8 @@ const PoolAdd = ({ setClosePool, tokenData, createLiquidityAndPool }) => {
           />
         </div>
       )}
-      {openTokenModelOne && (
-        <div className={Style.token}>
-          <SearchToken
-            openToken={setOpenTokenModelOne}
-            tokens={setTokenOne}
-            tokenData={tokenData}
-          />
-        </div>
-      )}
-
       {openTokenModelTwo && (
-        <div className={Style.token}>
-          <SearchToken
-            openToken={setOpenTokenModelTwo}
-            tokens={setTokenTwo}
-            tokenData={tokenData}
-          />
-        </div>
+          <TokenSelector></TokenSelector>
       )}
     </div>
   );
