@@ -32,7 +32,6 @@ const MyApp = ({ Component, pageProps }) => {
        <PoolAdd /> 
       {/* POOL--Dropdown -- Toke selector is drop dow to open for searching the tokens in Add Liquidity component */}
       {/*<TokenSelector></TokenSelector>*/}
-
       
       {/* --SWAP-- Component is same as SwapComponent, let see which one we can better fit with less efforts */}
       {/* <Component {...pageProps} /> */}
