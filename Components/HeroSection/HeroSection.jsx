@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import ether from "../../Assets/Assets-Daulat/ether.png";
-import BTC from "../../Assets/Bitcoin.png";
+import ether from "../../public/Assets/Assets-Daulat/ether.png";
+import BTC from "../../public/Assets/Bitcoin.png";
 import SearchToken from "../SearchToken/SearchToken";
 import Token from "../Token/Token";
 import Style from "./HeroSection.module.css";

@@ -1,5 +1,5 @@
 import React from "react";
-import phase from "../../Assets/HomePageAssets/phase.png";
+import phase from "../../public/Assets/HomePageAssets/phase.png";
 
 export const OurRoadmap = () => {
   return (

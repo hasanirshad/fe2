@@ -3,13 +3,13 @@ import Image from 'next/image';
 
 //external imports
 import Style from './TokenList.module.css'; // Ensure this path is correct
-import Close from '../../Assets/Assets-Daulat/Close.png'; 
-import Uniswap from '../../Assets/uniswap.png';
-import MetaMask2 from '../../Assets/metamask 2.png';
-import Settings from '../../Assets/Assets-Daulat/cross.png';
-import Off from '../../Assets/off.png';
-import WalletIcon from '../../Assets/WalletIcon.png';
-import ArrowDown from '../../Assets/arrow-right.png';
+import Close from '../../public/Assets/Assets-Daulat/Close.png'; 
+import Uniswap from '../../public/Assets/uniswap.png';
+import MetaMask2 from '../../public/Assets/metamask 2.png';
+import Settings from '../../public/Assets/Assets-Daulat/cross.png';
+import Off from '../../public/Assets/off.png';
+import WalletIcon from '../../public/Assets/WalletIcon.png';
+import ArrowDown from '../../public/Assets/arrow-right.png';
 
 const TokenList = ({ tokenDate, setOpenTokenBox }) => {
   // Sample data for demonstration purposes

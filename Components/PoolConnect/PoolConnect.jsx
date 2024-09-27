@@ -3,10 +3,10 @@ import Image from "next/image";
 
 //INTERNAL IMPORT
 import Style from "./PoolConnect.module.css";
-import Union from "../../Assets/Union.png";
-import Rectangle from "../../Assets/Rectangle 12.png";
-import ArrowDown from "../../Assets/arrow.png";
-import Separator from "../../Assets/PoolSeperator.png";
+import Union from "../../public/Assets/Union.png";
+import Rectangle from "../../public/Assets/Rectangle 12.png";
+import ArrowDown from "../../public/Assets/arrow.png";
+import Separator from "../../public/Assets/PoolSeperator.png";
 
 const PoolConnect = ({ setClosePool, getAllLiquidity, account }) => {
   console.log(getAllLiquidity);

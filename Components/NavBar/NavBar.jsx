@@ -2,9 +2,9 @@ import { useState } from 'react';
 import PropTypes from 'prop-types'; // I have added this line to import PropTypes
 import Image from 'next/image';
 import Style from './NavBar.module.css'; // This line is Updated to match Locofy.ai's naming convention
-import Uniswaplogo from '../../Assets/uniswap1.png'; // Retain the existing logo import
-import ActiveButtonBall from '../../Assets/ActiveButtonBall.png'; // Retain the existing active ball image import
-import ArrowRight from '../../Assets/arrow-right.png'; // Retain the existing arrow image import
+import Uniswaplogo from '../../public/Assets/uniswap1.png'; // Retain the existing logo import
+import ActiveButtonBall from '../../public/Assets/ActiveButtonBall.png'; // Retain the existing active ball image import
+import ArrowRight from '../../public/Assets/arrow-right.png'; // Retain the existing arrow image import
 import Model from '../../Components/Model/Model'; // Retain the existing Model component
 
 const NavBar = ({ className = "" }) => { //Match component structure

@@ -1,5 +1,5 @@
 import React from "react";
-import mission from "../../Assets/HomePageAssets/mission.png";
+import mission from "../../public/Assets/HomePageAssets/mission.png";
 
 export const OurMission = () => {
   return (

@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import styles from "./HeaderSection.module.css";
-import ActiveButtonBall from "../../Assets/ActiveButtonBall.png"; // Retain the existing active ball image import
+import ActiveButtonBall from "../../public/Assets/ActiveButtonBall.png"; // Retain the existing active ball image import
 import Image from "next/image";
 
 const HeaderSection = () => {

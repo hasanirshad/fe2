@@ -3,19 +3,19 @@ import Image from 'next/image'; // Import Image component from Next.js
 import Style from './SearchToken.module.css';
 
 // Make sure to update these paths to match your project structure
-import Ethereum from '../../Assets/Assets-Daulat/ether.png';
-import Bitcoin from '../../Assets/Bitcoin.png';
-import CardanoLogo from '../../Assets/CardanoLogo.png';
-import BinanceCoin from '../../Assets/BinanceCoin.png';
-import Polkadot from '../../Assets/PolkaDot.png';
-import Solanalogo from '../../Assets/Solanalogo.png';
-import ChainlinkLogo from '../../Assets/ChainlinkLogo.png';
-import Uniswaplogo from '../../Assets/UniswapCoin.png';
-import LitecoinLogo from '../../Assets/LitecoinLogo.png';
-import Dogecoin_Logo from '../../Assets/Dogecoin_Logo.png';
-import RippleLogo from '../../Assets/RippleLogo.png';
-import Close from '../../Assets/Assets-Daulat/Close.png'; // Importing the close icon
-import SearchRight from '../../Assets/Assets-Daulat/SearchRight.png';
+import Ethereum from '../../public/Assets/Assets-Daulat/ether.png';
+import Bitcoin from '../../public/Assets/Bitcoin.png';
+import CardanoLogo from '../../public/Assets/CardanoLogo.png';
+import BinanceCoin from '../../public/Assets/BinanceCoin.png';
+import Polkadot from '../../public/Assets/PolkaDot.png';
+import Solanalogo from '../../public/Assets/Solanalogo.png';
+import ChainlinkLogo from '../../public/Assets/ChainlinkLogo.png';
+import Uniswaplogo from '../../public/Assets/UniswapCoin.png';
+import LitecoinLogo from '../../public/Assets/LitecoinLogo.png';
+import Dogecoin_Logo from '../../public/Assets/Dogecoin_Logo.png';
+import RippleLogo from '../../public/Assets/RippleLogo.png';
+import Close from '../../public/Assets/Assets-Daulat/Close.png'; // Importing the close icon
+import SearchRight from '../../public/Assets/Assets-Daulat/SearchRight.png';
 
 const SearchToken = ({ openToken, tokens, tokenData }) => {
   const [active, setActive] = useState(null); // Initialize with null for no active state

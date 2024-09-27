@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .cover-img {
-  background-image: url(../../Assets/HomePageAssets/cover-img.jpg);
+  background-image: url(../../public/Assets/HomePageAssets/cover-img.jpg);
   object-fit: cover;
   background-position: center;
 }

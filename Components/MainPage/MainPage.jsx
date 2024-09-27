@@ -18,23 +18,23 @@ import {
 import HeroSection from "../../Components/HeroSection/HeroSection";
 // Importing the HeroSection component from the specified path
 
-import Settings from "../../Assets/Assets-Daulat/cross.png";
-import LineBlue from "../../Assets/LineBlue.png";
-import OrangeBall from "../../Assets/OrangeBall.png";
-import OrangeShadow from "../../Assets/OrangeShadow.png";
-import PurpleBall from "../../Assets/PurpleBall.png";
-import PurpleShadow from "../../Assets/PurpleShadow.png";
-import PurpleRising from "../../Assets/PurpleRising.png";
-import CoinsFalling from "../../Assets/CoinsFalling.png";
-import LineRising from "../../Assets/RisingLine.png";
-import Close from "../../Assets/Assets-Daulat/Close.png";
-import lock from "../../Assets/Assets-Daulat/lock.png";
+import Settings from "../../public/Assets/Assets-Daulat/cross.png";
+import LineBlue from "../../public/Assets/LineBlue.png";
+import OrangeBall from "../../public/Assets/OrangeBall.png";
+import OrangeShadow from "../../public/Assets/OrangeShadow.png";
+import PurpleBall from "../../public/Assets/PurpleBall.png";
+import PurpleShadow from "../../public/Assets/PurpleShadow.png";
+import PurpleRising from "../../public/Assets/PurpleRising.png";
+import CoinsFalling from "../../public/Assets/CoinsFalling.png";
+import LineRising from "../../public/Assets/RisingLine.png";
+import Close from "../../public/Assets/Assets-Daulat/Close.png";
+import lock from "../../public/Assets/Assets-Daulat/lock.png";
 import Toggle from "../../Components/Toggle/Toggle";
-import ActiveButtonBall from "../../Assets/ActiveBall.png";
-import DownBox from "../../Assets/Down.png";
-import Down from "../../Assets/Down1.png";
-import Pathner from "../../Assets/Pathner.png";
-import ColorGradient from "../../Assets/ColorGradient.png";
+import ActiveButtonBall from "../../public/Assets/ActiveBall.png";
+import DownBox from "../../public/Assets/Down.png";
+import Down from "../../public/Assets/Down1.png";
+import Pathner from "../../public/Assets/Pathner.png";
+import ColorGradient from "../../public/Assets/ColorGradient.png";
 import styled from "@emotion/styled";
 // Importing images and components for use in the MainPage component
 

@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./FooterSection.module.css";
-import footerBackground from "../../Assets/Footer_Background.png";
-import coin from "../../Assets/coins.png";
+import footerBackground from "../../public/Assets/Footer_Background.png";
+import coin from "../../public/Assets/coins.png";
 import logo from "../../public/svgs/logo.svg";
 import { textFieldClasses } from "@mui/material";
 

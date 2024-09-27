@@ -1,10 +1,10 @@
 import React from 'react';
 import Image from 'next/image'; // Import Image component from Next.js
 import Style from "./Token.module.css"; // Import CSS module for styling
-import Close from "../../Assets/Assets-Daulat/Close.png"; // Import Close image asset
+import Close from "../../public/Assets/Assets-Daulat/Close.png"; // Import Close image asset
 import Toggle from '../Toggle/Toggle'; // Correctly import Toggle component
-import Assets from '../../Assets'; // Import all assets from the Assets folder
-import lock from '../../Assets/Assets-Daulat/lock.png'
+import Assets from '../../public/Assets'; // Import all assets from the Assets folder
+import lock from '../../public/Assets/Assets-Daulat/lock.png'
 
 const Token = ({ setOpenSetting }) => {
   return (

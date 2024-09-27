@@ -1,7 +1,7 @@
 import React from "react";
-import card1 from "../../Assets/HomePageAssets/card-1.png";
-import card2 from "../../Assets/HomePageAssets/card-2.png";
-import card3 from "../../Assets/HomePageAssets/card-3.png";
+import card1 from "../../public/Assets/HomePageAssets/card-1.png";
+import card2 from "../../public/Assets/HomePageAssets/card-2.png";
+import card3 from "../../public/Assets/HomePageAssets/card-3.png";
 
 export const LastestBlog = () => {
   return (

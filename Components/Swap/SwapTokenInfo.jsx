@@ -7,7 +7,7 @@ const SwapTokenInfo = ({logo, balance }) => {
     const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState('');
   const options = [
-    { value: 'option1', label: 'USDC', img: '../../Assets/SwapToken/usdc.png', desc: 'ETH' },
+    { value: 'option1', label: 'USDC', img: '../Assets/SwapToken/usdc.png', desc: 'ETH' },
     { value: 'option2', label: 'Ethereum', img: '/images/option2.png', desc: 'ZRX' },
     { value: 'option3', label: 'Ox Protocol', img: '/images/option3.png', desc: '1INCH' },
     { value: 'option4', label: '1inch', img: '/images/option3.png', desc: 'AAVE' },

@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 //INTERNAL IMPORT
-import ArrowLeft from "../../Assets/ArrowLeft.png";
-import Close from "../../Assets/setting.png";
-import etherlogo from "../../Assets/etherlogo.png";
-import trade1 from "../../Assets/trade1.png";
-import wallet from "../../Assets/Wallet.png";
+import ArrowLeft from "../../public/Assets/ArrowLeft.png";
+import Close from "../../public/Assets/setting.png";
+import etherlogo from "../../public/Assets/etherlogo.png";
+import trade1 from "../../public/Assets/trade1.png";
+import wallet from "../../public/Assets/Wallet.png";
 import Style from "./PoolAdd.module.css";
 import { Token, SearchToken, TokenSelector } from "../../Components/index.js";
 

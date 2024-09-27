@@ -1,5 +1,5 @@
 import React from "react";
-import coverImg from "../../Assets/HomePageAssets/cover-img.jpg";
+import coverImg from "../../public/Assets/HomePageAssets/cover-img.jpg";
 export const MainCover = () => {
   return (
     <section className=" text-center py-16 relative px-4 flex flex-col items-center justify-center cover-img">

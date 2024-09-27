@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styles from "./Staking.module.css";
 import { ethers } from "ethers";
-import StakingABI from "../../artifacts/contracts/ETFStaking.sol/ETFStaking.json";
+import StakingABI from "../../public/artifacts/contracts/ETFStaking.sol/ETFStaking.json";
 import Image from "next/image";
-import USDTImage from "../../Assets/usdt.png";
-import ETFSwapImage from "../../Assets/etfswap2.png";
+import USDTImage from "../../public/Assets/usdt.png";
+import ETFSwapImage from "../../public/Assets/etfswap2.png";
 
 const Staking = ({ provider }) => {
   const [stakeTokenAddress, setStakeTokenAddress] = useState("");

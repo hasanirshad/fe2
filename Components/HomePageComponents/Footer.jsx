@@ -1,6 +1,6 @@
 import React from "react";
-import footer from "../../Assets/HomePageAssets/Footer Background.png";
-import coin from "../../Assets/HomePageAssets/coins.png";
+import footer from "../../public/Assets/HomePageAssets/Footer Background.png";
+import coin from "../../public/Assets/HomePageAssets/coins.png";
 
 export const Footer = () => {
   return (
