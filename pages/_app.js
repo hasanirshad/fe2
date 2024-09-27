@@ -28,7 +28,7 @@ const MyApp = ({ Component, pageProps }) => {
       {/* <Model></Model> */}
 
       {/* <MainPage></MainPage>  */}
-      {/* <BodyContent></BodyContent> i comment this portion */}
+      <BodyContent></BodyContent>
 
       {/* -- POOL -- AddLiquidity and PoolAdd for same purpose. Pool add is custom built and AddLiquidity is AI built. Decide which one is better */}
       {/*<PoolAdd /> */}
@@ -41,6 +41,7 @@ const MyApp = ({ Component, pageProps }) => {
 
       {/* <StakingComponent /> i comment this portion */}
       {/* <FooterSection /> this is a react prject footer and i comment this portion */}
+
       <Website />
       <Footer />
     </div>

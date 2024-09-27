@@ -1,27 +1,27 @@
 import React,{useState} from 'react';
 import styles from './SendComponent.module.css';
-import Image from 'next/image'
-import { FaLongArrowAltUp } from 'react-icons/fa';
+
+import { FaDollarSign } from 'react-icons/fa';
+
 
 const SendComponent = () => {
-    const [amount, setAmount] = useState('$0');
-    const [error, setError] = useState('');
+    const [amount, setAmount] = useState('');
+    const [error, setError] = useState('Increase your amount to $10 or more');
     const [Show, setShow] = useState('');
     const handleInputChange = (e) => {
         const value = e.target.value;
         setAmount(value);
     
-        if (value < 100) {
-          setError('Increase your amount to $100 or more');
+        if (value < 10) {
+          setError('Increase your amount to $10 or more');
         } else {
           setError(''); 
         }
 
-        if(value > 99){
+        if(value > 9){
           setShow( 'Sucessfully your Amount Added ')
         }else{
             setShow('');
-
         }
       };
     return (
@@ -31,14 +31,23 @@ const SendComponent = () => {
                     <p className={styles.sendingp} >You’re sending</p>
                 </div>
                 <div className={styles.divinput}>
-                    <input  type="text"  value={amount} onChange={handleInputChange} className={styles.inputclass} placeholder='$0' />
-                </div>
+                  <FaDollarSign className={styles.icondoller} />
+        <input
+          type="Phone Numberr"
+          value={amount}
+          onChange={handleInputChange}
+          className={styles.inputclass}
+          placeholder="0"
+          maxLength="2"
+        />
+      </div>
                 <div className={styles.textandicon}>
                     <p> 0 ETH</p>
                 </div>
             </section>
             <section className={styles.sectiontwo}>
               <div className={styles.fleximagetext }>
+              
                 <p className={styles.flexp1}> ETH  </p>
                 <p className={styles.flexp2}> Balance: ${amount}</p>
               </div>

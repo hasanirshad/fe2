@@ -12,7 +12,7 @@ export const OurRoadmap = () => {
           </div>
           {/* Phase 1 */}
           <div className="flex items-center space-x-11 w-full text-xs lg:text-base">
-            <div className=" text-white p-6 custom-shape bg-[url(svgs/phase.svg)] object-cover w-[800px] bg-center bg-[white] bg-no-repeat rounded-[10%]; relative">
+            <div className=" text-white p-6 custom-shape object-cover w-[800px] bg-center bg-[white] bg-no-repeat rounded-[10%]; relative">
               <div className="absolute top-0 left-[87%] flex items-center justify-center w-16 h-16 bg-white text-white rounded-[40%]">
                 <span className="bg-sky-600 px-4 py-1 rounded-full text-4xl">
                   1
@@ -71,7 +71,7 @@ export const OurRoadmap = () => {
           </div>
           {/* Phase 3 */}
           <div className="relative flex items-center space-x-11 w-full text-xs lg:text-base">
-            <div className=" text-white p-6 custom-shape bg-[url(svgs/phase.svg)] object-cover w-[800px] bg-center bg-[white] bg-no-repeat rounded-[10%]; relative">
+            <div className=" text-white p-6 custom-shape object-cover w-[800px] bg-center bg-[white] bg-no-repeat rounded-[10%]; relative">
               <div className="absolute top-0 right-0 flex items-center justify-center w-16 h-16 bg-white text-white rounded-[50%]">
                 <span className="bg-sky-600 px-4 py-1 rounded-full text-4xl">
                   3

@@ -35,7 +35,7 @@
 }
 /* Other */
 .custom-shape {
-  background-image: url(../../public/svgs/circle.svg);
+  background-image: url();
   object-fit: cover;
   width: 800px;
   background-position: center;

@@ -25,9 +25,9 @@ const BodyContent = () => {
     case "stake":
         return <Staking></Staking>;
     case "Send":
-        return <SendComponent>Send Content</SendComponent>;
+        return <SendComponent></SendComponent>;
     case "Buy":
-        return <BuyComponent>Buy Content</BuyComponent>;
+        return <BuyComponent></BuyComponent>;
     default:
         return <div>Swap Content</div>;
     }
