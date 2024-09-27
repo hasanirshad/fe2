@@ -1,3 +1,6 @@
+/* Google Inter Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 .swapContainer {
   border-radius: 0;
   display: flex;
@@ -150,6 +153,7 @@
   padding: 25px 70px;
   font: 500 24px/1 Inter, sans-serif;
   border: 1px solid #162a69;
+  color: white;
 }
 
 @media (max-width: 991px) {
@@ -169,4 +173,74 @@
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* Dropdown */
+.maindropdown{
+  position: relative;
+}
+.maindropdown ul{
+  position:absolute;
+  list-style: none;
+  border: 1px solid #162A69;
+  background-color:  #1E1E48;
+  color: white;
+  width: 382px;
+  z-index: 1;
+  border-radius: 8px;
+  margin-left: 180px;
+  margin-top: -380px;
+}
+.maindropdown ul p{
+  text-align: start;
+  background-color: #1E1E48;
+  margin-top: 30px;
+  margin-left: 20px;
+  font-family: "Inter";
+  font-weight: 500;
+
+}
+.maindropdown ul li{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #1E1E48;
+  text-align: start;
+  color: white;
+  margin-top: 20px;
+  margin-left: 20px;
+  
+}
+.maindropdown .dropdownbutton{
+  background-color: transparent;
+  color: white;
+  width: 131px;
+  height: 45.35px;
+  border: 1px solid #162A69;
+}
+.maindropdown ul .searchinput{
+  margin-top: 10px;
+  padding: 20px;
+  width: 342px ;
+  height: 44.8px;
+  border-radius: 62px;
+  border: 1px solid #1E1E48;
+  background-color: #162A69;
+  color: white;
+}
+.maindropdown ul .searchinput::placeholder{
+  size: 14px;
+  font-family: 'Inter';
+  font-weight: 400;
+  color: white;
+}
+.maindropdown .spandesc{
+  font-size: 13px;
+  font-weight: 400;
+  font-family: "Inter";
+  justify-content: end;
+  text-align: end;
+  align-items: end;
+  opacity: .5;
 }
