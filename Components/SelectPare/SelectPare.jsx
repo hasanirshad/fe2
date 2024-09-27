@@ -1,10 +1,45 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styles from "./SelectPare.module.css";
+import TokenSelector from "../TokenSelector/TokenSelector";
 
 const SelectPare = () => {
+  const [selectDrowdown, setSelectDrowdown] = useState(false);
+  const [value, setValue] = useState(true);
+  const dropdownRef = useRef(null);
+  const tokenSelectorRef = useRef(null);
+
+  function handleDrowpdown(e) {
+    setSelectDrowdown((prev) => !prev);
+  }
+  const handleClickOutside = (event) => {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target) &&
+      tokenSelectorRef.current &&
+      !tokenSelectorRef.current.contains(event.target)
+    ) {
+      setSelectDrowdown(false);
+    }
+  };
+  function handleShow() {
+    setValue((prev) => !prev);
+    console.log(value);
+  }
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
     <>
       <div className={styles.container}>
+        {selectDrowdown && (
+          <div ref={tokenSelectorRef}>
+            <TokenSelector />
+          </div>
+        )}
         <div className={styles.section1}>
           <span>Select Pair</span>
         </div>
@@ -13,13 +48,13 @@ const SelectPare = () => {
             <img src="svgs/logo.svg" alt="loading..." />
             <span>ETFSwap</span>
           </div>
-          <div>
+          <div ref={dropdownRef}>
             <img src="svgs/slectPairImg2.svg" alt="loading..." />
-            <select name="selecPair" id="select_id">
-              <option value="1inch">1inch</option>
-              <option value="2inch">2inch</option>
-              <option value="3inch">3inch</option>
-            </select>
+            <select
+              name="selecPair"
+              id="select_id"
+              onClick={handleDrowpdown}
+            ></select>
           </div>
         </div>
         <div className={styles.section3}>
@@ -28,10 +63,14 @@ const SelectPare = () => {
             <span>The % you will earn in fees.</span>
           </div>
           <div>
-            <button>Hide</button>
+            <button onClick={handleShow}>{value ? "Hide" : "Show"}</button>
           </div>
         </div>
-        <div className={styles.section4}>
+        <div
+          className={`${styles.section4} ${
+            value ? styles.boxShow : styles.hide
+          }`}
+        >
           <PercentageBox value1="0.01" value2="0" />
           <PercentageBox value1="0.05" value2="0" />
           <PercentageBox value1="0.30" value2="9" />
@@ -49,10 +88,10 @@ const SelectPare = () => {
           </div>
         </div>
         <div>
-          <PriceRange value="0" />
+          <PriceRange priceLable="Low Price" />
         </div>
         <div>
-          <PriceRange value="0" />
+          <PriceRange priceLable="High Price" />
         </div>
       </div>
     </>
@@ -71,17 +110,25 @@ export const PercentageBox = ({ value1, value2 }) => {
   );
 };
 
-export const PriceRange = ({ value }) => {
+export const PriceRange = ({ priceLable }) => {
+  const [count, setCount] = useState(0);
+
+  function increment() {
+    setCount((prev) => prev + 1);
+  }
+  function decrement() {
+    count > 0 ? setCount((prev) => prev - 1) : setCount(0);
+  }
   return (
     <div className={styles.priceRangeContainer}>
       <div>
-        <span>Low price</span>
-        <span>{value}</span>
+        <span>{priceLable}</span>
+        <span>{count}</span>
         <span>Per</span>
       </div>
       <div>
-        <button>+</button>
-        <button>-</button>
+        <button onClick={increment}>+</button>
+        <button onClick={decrement}>-</button>
       </div>
     </div>
   );

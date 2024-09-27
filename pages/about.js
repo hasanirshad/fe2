@@ -1,13 +1,9 @@
 // pages/about.js
-import React from 'react';
+import { TokenSelector } from "@/Components";
+import React from "react";
 
 const About = () => {
-  return (
-    <div>
-      <h1>About Page</h1>
-      <p>This is the about page content.</p>
-    </div>
-  );
+  return <TokenSelector />;
 };
 
 export default About;
