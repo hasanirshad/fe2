@@ -7,21 +7,6 @@ const navItems = ['Swap', 'Stake', 'Buy', 'Sell'];
 const Swap = () => {
   return (
     <main className={styles.swapContainer}>
-      {/*<nav className={styles.navBar}>
-        {navItems.map((item, index) => (
-          <div key={index} className={index === 0 ? styles.activeNavItem : ''}>
-            {item}
-          </div>
-        ))}
-        <img 
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/ab0a3e8d87101cebdd14a55c0a3919bacfbdedcb6fe386ac6710c307cd463de0?placeholderIfAbsent=true&apiKey=45ca834082bd4e999875d6aa728b9960" 
-          alt="Settings" 
-          className={styles.settingsIcon} 
-        />
-        </nav>
-      
-      <hr className={styles.divider} />*/}
-      
       <section className={styles.swapSection}>
         <img 
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e18b20cae4d410bb8cbceecd2e47c4ade8aed704378de4ba8605025f83ba189?placeholderIfAbsent=true&apiKey=45ca834082bd4e999875d6aa728b9960" 
