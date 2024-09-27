@@ -19,20 +19,25 @@ import {
   BodyContent,
   SwapBodyContent,
   Swap,
-  SwapTokenInfo
+  SwapTokenInfo,
+  SelectPare,
 } from "../Components/index";
 
 const MyApp = ({ Component, pageProps }) => {
   return (
     <div>
-      <HeaderSection />
+      {/* <HeaderSection /> */}
 
       {/* Leave for now --  Connect Wallet Window is Model */}
       {/* <Model></Model> */}
-      
-  {/* <MainPage></MainPage>  */}
-  {/* <BodyContent></BodyContent> */}
-  <SwapBodyContent></SwapBodyContent>
+
+      {/* <MainPage></MainPage>  */}
+      {/* <BodyContent></BodyContent> */}
+      <SwapBodyContent></SwapBodyContent>
+
+      {/* <MainPage></MainPage>  */}
+      {/* <BodyContent></BodyContent> */}
+
       {/* -- POOL -- AddLiquidity and PoolAdd for same purpose. Pool add is custom built and AddLiquidity is AI built. Decide which one is better */}
       {/*<PoolAdd /> */}
       {/* POOL--Dropdown -- Toke selector is drop dow to open for searching the tokens in Add Liquidity component */}
@@ -46,6 +51,9 @@ const MyApp = ({ Component, pageProps }) => {
       {/* <FooterSection /> this is a react prject footer and i comment this portion */}
       <Website />
       <Footer />
+      {/*<Staking />*/}
+      {/* <FooterSection /> */}
+      <SelectPare />
     </div>
   );
 };
