@@ -9,8 +9,10 @@ import {
     StakingComponent,
     PoolAdd,
     Swap,
-    Staking
+    Staking,
+    SendComponent
   } from "../";
+import BuyComponent from "../BuyComponent/BuyComponent";
 
 const SwapBodyContent = () => {
     
@@ -24,9 +26,9 @@ const SwapBodyContent = () => {
     case "stake":
         return <Staking></Staking>;
     case "buy":
-        return <SwapComponent>Buy Content</SwapComponent>;
+        return <SendComponent>Buy Content</SendComponent>;
     case "sell":
-        return <SwapComponent>Sell Content</SwapComponent>;
+        return <BuyComponent>Sell Content</BuyComponent>;
     default:
         return <div>Swap Content</div>;
     }

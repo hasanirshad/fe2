@@ -31,7 +31,7 @@ const MyApp = ({ Component, pageProps }) => {
       {/* <Model></Model> */}
       
   {/* <MainPage></MainPage>  */}
-  <BodyContent></BodyContent>
+  {/* <BodyContent></BodyContent> */}
   <SwapBodyContent></SwapBodyContent>
       {/* -- POOL -- AddLiquidity and PoolAdd for same purpose. Pool add is custom built and AddLiquidity is AI built. Decide which one is better */}
       {/*<PoolAdd /> */}
