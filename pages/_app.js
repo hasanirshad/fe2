@@ -26,7 +26,7 @@ import {
 const MyApp = ({ Component, pageProps }) => {
   return (
     <div>
-      {/* <HeaderSection /> */}
+      <HeaderSection />
 
       {/* Leave for now --  Connect Wallet Window is Model */}
       {/* <Model></Model> */}
@@ -53,7 +53,6 @@ const MyApp = ({ Component, pageProps }) => {
       <Footer />
       {/*<Staking />*/}
       {/* <FooterSection /> */}
-      <SelectPare />
     </div>
   );
 };

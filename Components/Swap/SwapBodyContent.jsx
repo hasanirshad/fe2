@@ -1,35 +1,37 @@
 import React, { useState } from "react";
 import styles from "../Swap/SwapBodyConten.module.css";
 import { FaCog } from "react-icons/fa"; // Importing a settings icon from react-icons
-import { Inter } from 'next/font/google'
+import { Inter } from "next/font/google";
 //imported from the components we created
 import {
-    AddLiquidity,
-    SwapComponent,
-    StakingComponent,
-    PoolAdd,
-    Swap,
-    Staking,
-    SendComponent
-  } from "../";
+  AddLiquidity,
+  SwapComponent,
+  StakingComponent,
+  PoolAdd,
+  Swap,
+  Staking,
+  SendComponent,
+  SelectPare,
+} from "../";
 import BuyComponent from "../BuyComponent/BuyComponent";
 
 const SwapBodyContent = () => {
-    
-  const [activeTab, setActiveTab] = useState("swap");
+  const [activeTab, setActiveTab] = useState("pool");
   const [showSettings, setShowSettings] = useState(false); // State to handle the popup visibility
 
   const renderContent = () => {
     switch (activeTab) {
-    case "swap":
+      case "pool":
+        return <SelectPare></SelectPare>;
+      case "swap":
         return <Swap></Swap>;
-    case "stake":
+      case "stake":
         return <Staking></Staking>;
-    case "buy":
+      case "buy":
         return <SendComponent>Buy Content</SendComponent>;
-    case "sell":
+      case "sell":
         return <BuyComponent>Sell Content</BuyComponent>;
-    default:
+      default:
         return <div>Swap Content</div>;
     }
   };
@@ -38,6 +40,12 @@ const SwapBodyContent = () => {
     <div className={styles.container}>
       {/* Tabs */}
       <div className={styles.tabs}>
+        <button
+          className={activeTab === "pool" ? styles.activeTab : styles.tab}
+          onClick={() => setActiveTab("pool")}
+        >
+          Pool
+        </button>
         <button
           className={activeTab === "swap" ? styles.activeTab : styles.tab}
           onClick={() => setActiveTab("swap")}
@@ -73,9 +81,7 @@ const SwapBodyContent = () => {
       </div>
 
       {/* Tab Content */}
-      <div className={styles.content}>
-        {renderContent()}
-      </div>
+      <div className={styles.content}>{renderContent()}</div>
 
       {/* Settings Popup */}
       {showSettings && (

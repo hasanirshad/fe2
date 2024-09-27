@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import styles from "./BodyContent.module.css";
 import { SendComponent } from "../";
- import BuyComponent from "../BuyComponent/BuyComponent";
+import BuyComponent from "../BuyComponent/BuyComponent";
 import { FaCog } from "react-icons/fa"; // Importing a settings icon from react-icons
 //imported from the components we created
 import {
-    AddLiquidity,
-    SwapComponent,
-    StakingComponent,
-    PoolAdd,
-    Staking
-  } from "../";
+  AddLiquidity,
+  SwapComponent,
+  StakingComponent,
+  PoolAdd,
+  Staking,
+  SelectPare,
+} from "../";
 
 const BodyContent = () => {
   const [activeTab, setActiveTab] = useState("pool");
@@ -18,17 +19,17 @@ const BodyContent = () => {
 
   const renderContent = () => {
     switch (activeTab) {
-    case "pool":
-        return <PoolAdd></PoolAdd>;  
-    case "swap":
+      case "pool":
+        return <PoolAdd></PoolAdd>;
+      case "swap":
         return <SwapComponent></SwapComponent>;
-    case "stake":
+      case "stake":
         return <Staking></Staking>;
-    case "Send":
+      case "Send":
         return <SendComponent>Send Content</SendComponent>;
-    case "Buy":
+      case "Buy":
         return <BuyComponent>Buy Content</BuyComponent>;
-    default:
+      default:
         return <div>Swap Content</div>;
     }
   };
@@ -78,9 +79,7 @@ const BodyContent = () => {
       </div>
 
       {/* Tab Content */}
-      <div className={styles.content}>
-        {renderContent()}
-      </div>
+      <div className={styles.content}>{renderContent()}</div>
 
       {/* Settings Popup */}
       {showSettings && (
