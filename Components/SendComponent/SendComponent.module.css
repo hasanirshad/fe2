@@ -45,7 +45,17 @@
   color: white;
 }
 .textandicon {
-  color: white;
+  display: flex ;
+  justify-content: center;
+}
+.tbarrow{
+  color: #ffffffcc;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 3px;
+}
+.ethtext{
+  color: #ffffffcc;
 }
 .sectiontwo {
   background-color: #1e1e49eb;
@@ -62,6 +72,7 @@
 .fleximagetext {
   margin-left: 15px;
   margin-top: 15px;
+  display: flex;
 }
 .flexp1 {
   font-family: Inter;
@@ -116,19 +127,34 @@
   font-weight: 300;
 }
 .sectionfour {
-  background-color: #1e1e49eb;
-  border: 1px solid #162a69;
-  min-height: 70px;
-  text-align: center;
-  border-radius: 8px;
-  margin-top: 10px;
-  padding: 20px;
+    background-color: #1e1e49eb;
+    border: 1px solid #162a69;
+    min-height: 70px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-left: 41px;
+    padding: 20px;
+    max-width: 820px;
+    margin: 0 auto;
 }
 .sectionfourp {
   font-family: Inter;
   font-size: 24px;
   font-weight: 500;
   line-height: 23px;
-  max-width: 820px;
-  margin: 0 auto;
+}
+.img{
+  width: 100%;
+  max-width: 40px;
+}
+.mainimgclass{
+  background-color: #617DE7;
+    border-radius: 50%;
+    padding: 9px;
+}
+.maintextscls{
+  margin-left: 15px;
 }

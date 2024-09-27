@@ -15,7 +15,7 @@ export const Faq = () => {
             <div className="bg-white rounded-lg shadow-md">
               <button
                 className="w-full text-left p-8 font-semibold focus:outline-none"
-                onclick="toggleDropdown('dropdown1')"
+                onClick="toggleDropdown('dropdown1')"
               >
                 When Will I Get My Tokens?
                 <span
@@ -32,7 +32,7 @@ export const Faq = () => {
             <div className="bg-white rounded-lg shadow-md">
               <button
                 className="w-full text-left p-8 font-semibold focus:outline-none"
-                onclick="toggleDropdown('dropdown2')"
+                onClick="toggleDropdown('dropdown2')"
               >
                 Will You List On Exchanges?
                 <span
@@ -49,7 +49,7 @@ export const Faq = () => {
             <div className="bg-white rounded-lg shadow-md">
               <button
                 className="w-full text-left p-8 font-semibold focus:outline-none"
-                onclick="toggleDropdown('dropdown3')"
+                onClick="toggleDropdown('dropdown3')"
               >
                 Will I Pay Any Tax For Buying And Selling?
                 <span
@@ -66,7 +66,7 @@ export const Faq = () => {
             <div className="bg-white rounded-lg shadow-md">
               <button
                 className="w-full text-left p-8 font-semibold focus:outline-none"
-                onclick="toggleDropdown('dropdown4')"
+                onClick="toggleDropdown('dropdown4')"
               >
                 Do You Have An Anti-Dump Plan For The Tokens?
                 <span
@@ -85,7 +85,7 @@ export const Faq = () => {
             <div className="bg-white rounded-lg shadow-md">
               <button
                 className="w-full text-left p-8  font-semibold focus:outline-none"
-                onclick="toggleDropdown('dropdown5')"
+                onClick="toggleDropdown('dropdown5')"
               >
                 Is ETFSwap Regulated?
                 <span
@@ -102,7 +102,7 @@ export const Faq = () => {
             <div className="bg-white rounded-lg shadow-md">
               <button
                 className="w-full text-left p-8  font-semibold focus:outline-none"
-                onclick="toggleDropdown('dropdown6')"
+                onClick="toggleDropdown('dropdown6')"
               >
                 How Can I See Your Community?
                 <span
@@ -119,7 +119,7 @@ export const Faq = () => {
             <div className="bg-white rounded-lg shadow-md">
               <button
                 className="w-full text-left p-8  font-semibold focus:outline-none"
-                onclick="toggleDropdown('dropdown7')"
+                onClick="toggleDropdown('dropdown7')"
               >
                 What Returns Can I Expect For Adding Liquidity?
                 <span
@@ -137,7 +137,7 @@ export const Faq = () => {
             <div className="bg-white rounded-lg shadow-md">
               <button
                 className="w-full text-left p-8  font-semibold focus:outline-none"
-                onclick="toggleDropdown('dropdown8')"
+                onClick="toggleDropdown('dropdown8')"
               >
                 What Revenue Do You Expect ETFSwap Will Generate?
                 <span
