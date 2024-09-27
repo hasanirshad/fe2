@@ -43,3 +43,6 @@ button {
   cursor: pointer;
   font-family: inherit;
 }
+.black-font{
+  color: black !important;
+}

@@ -18,8 +18,8 @@ export const OurRoadmap = () => {
                   1
                 </span>
               </div>
-              <h2 className="text-3xl font-semibold mb-4 text-start">Phase</h2>
-              <ol className="list-decimal list-inside text-start">
+              <h2 className="text-3xl font-semibold mb-4 text-start black-font">Phase</h2>
+              <ol className="list-decimal list-inside text-start black-font">
                 <li className="p-3">Website launch</li>
                 <li className="p-3">Obtaining the necessary licenses</li>
                 <li className="p-3">Smart Contract Audit</li>
@@ -54,10 +54,10 @@ export const OurRoadmap = () => {
                   2
                 </span>
               </div>
-              <h2 className="text-3xl font-semibold mb-4 text-start mt-12">
+              <h2 className="text-3xl font-semibold mb-4 text-start mt-12  black-font">
                 Phase
               </h2>
-              <ol className="list-decimal list-inside text-start">
+              <ol className="list-decimal list-inside text-start  black-font">
                 <li className="p-2">Website launch</li>
                 <li className="p-2">Obtaining the necessary licenses</li>
                 <li className="p-2">Smart Contract Audit</li>
@@ -77,8 +77,8 @@ export const OurRoadmap = () => {
                   3
                 </span>
               </div>
-              <h2 className="text-3xl font-semibold mb-4 text-start">Phase</h2>
-              <ol className="list-decimal list-inside text-start">
+              <h2 className="text-3xl font-semibold mb-4 text-start black-font">Phase</h2>
+              <ol className="list-decimal list-inside text-start black-font">
                 <li className="p-3">Website launch</li>
                 <li className="p-3">Obtaining the necessary licenses</li>
                 <li className="p-3">Smart Contract Audit</li>

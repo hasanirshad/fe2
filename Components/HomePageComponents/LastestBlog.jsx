@@ -17,7 +17,7 @@ export const LastestBlog = () => {
               <img className="card-img rounded-lg" src={card1} alt="" />
             </div>
             <div className="p-6">
-              <h3 className="font-bold text-xl mb-2">
+              <h3 className="font-bold text-xl mb-2 black-font">
                 How to Trade Crypto Futures in the US: A Beginner's Guide
               </h3>
               <p className="text-gray-700 text-base mb-4">
@@ -42,7 +42,7 @@ export const LastestBlog = () => {
               <img className="card-img rounded-lg" src={card2} alt="" />
             </div>
             <div className="p-6">
-              <h3 className="font-bold text-xl mb-2">
+              <h3 className="font-bold text-xl mb-2 black-font">
                 What is a Crypto ETF? Understanding Crypto ETF...
               </h3>
               <p className="text-gray-700 text-base mb-4">
@@ -67,7 +67,7 @@ export const LastestBlog = () => {
               <img className="card-img rounded-lg" src={card3} alt="" />
             </div>
             <div className="p-6">
-              <h3 className="font-bold text-xl mb-2">
+              <h3 className="font-bold text-xl mb-2 black-font">
                 What Are Tokens in Cryptocurrency? A Detailed...
               </h3>
               <p className="text-gray-700 text-base mb-4">

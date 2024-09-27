@@ -1,4 +1,5 @@
 import React from "react";
+import Image from 'next/image';
 import mission from "../../public/Assets/HomePageAssets/mission.png";
 
 export const OurMission = () => {
@@ -16,7 +17,7 @@ export const OurMission = () => {
             <span className="text-gray-300 text-xl">01</span>
           </div>
           <div className="mt-4">
-            <h3 className="text-base font-semibold">Speed and Efficiency</h3>
+            <h3 className="text-base font-semibold black-font">Speed and Efficiency</h3>
             <p className="text-gray-500 mt-2 text-3xl">→</p>
           </div>
         </div>
@@ -31,7 +32,7 @@ export const OurMission = () => {
             <span className="text-gray-300 text-xl">02</span>
           </div>
           <div className="mt-4">
-            <h3 className="text-base font-semibold">
+            <h3 className="text-base font-semibold  black-font">
               Consistency and Discipline
             </h3>
             <p className="text-gray-500 mt-2 text-3xl">→</p>
@@ -48,7 +49,7 @@ export const OurMission = () => {
             <span className="text-gray-300 text-xl">03</span>
           </div>
           <div className="mt-4">
-            <h3 className="text-base font-semibold">
+            <h3 className="text-base font-semibold black-font">
               Data-driven Decision Making
             </h3>
             <p className="text-gray-500 mt-2 text-3xl">→</p>
@@ -65,7 +66,7 @@ export const OurMission = () => {
             <span className="text-gray-300 text-xl">04</span>
           </div>
           <div className="mt-4">
-            <h3 className="text-base font-semibold">
+            <h3 className="text-base font-semibold black-font">
               Scalability and Accessibility
             </h3>
             <p className="text-gray-500 mt-2 text-3xl">→</p>
@@ -78,7 +79,7 @@ export const OurMission = () => {
           <div className="w-full md:w-1/3 relative">
             {/* Replace the src with your logo image */}
             <div className="background w-[85%] h-[85%] bg-[#e6f4fa] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute rounded-full -z-20" />
-            <img
+            <Image
               src={mission}
               alt="Logo Foreground"
               className="w-full h-auto rounded-full logo-mask text-white"
