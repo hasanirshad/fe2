@@ -14,30 +14,32 @@ import {
   StakingComponent,
   PoolAdd,
   FooterSection,
-  BodyContent
+  BodyContent,
+  SelectPare,
 } from "../Components/index";
 
 const MyApp = ({ Component, pageProps }) => {
   return (
     <div>
-      <HeaderSection />
+      {/* <HeaderSection /> */}
 
       {/* Leave for now --  Connect Wallet Window is Model */}
       {/* <Model></Model> */}
-      
-  {/* <MainPage></MainPage>  */}
-  <BodyContent></BodyContent>
+
+      {/* <MainPage></MainPage>  */}
+      {/* <BodyContent></BodyContent> */}
 
       {/* -- POOL -- AddLiquidity and PoolAdd for same purpose. Pool add is custom built and AddLiquidity is AI built. Decide which one is better */}
-       {/*<PoolAdd /> */}
+      {/*<PoolAdd /> */}
       {/* POOL--Dropdown -- Toke selector is drop dow to open for searching the tokens in Add Liquidity component */}
       {/*<TokenSelector></TokenSelector>*/}
-      
+
       {/* --SWAP-- Component is same as SwapComponent, let see which one we can better fit with less efforts */}
       {/* <Component {...pageProps} /> */}
 
       {/*<Staking />*/}
-      <FooterSection />
+      {/* <FooterSection /> */}
+      <SelectPare />
     </div>
   );
 };
