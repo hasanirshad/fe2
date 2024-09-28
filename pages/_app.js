@@ -8,6 +8,7 @@ import {
   FooterSection,
   HeaderSection,
 } from "../Components/index";
+import Pool from './pool';
 
 function MyApp({ Component, pageProps }) {
   return (

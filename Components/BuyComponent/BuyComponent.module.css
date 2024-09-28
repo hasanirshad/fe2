@@ -53,6 +53,8 @@
 }
 .textandicon {
   color: white;
+  display: flex;
+  justify-content: center;
 }
 .mainbuttoncls {
   margin: 20px 20px 20px 20px;
@@ -80,4 +82,34 @@
   font-size: 24px;
   font-weight: 500;
   line-height: 23px;
+}
+.dropdownContainer{
+  display: flex;
+}
+.dropdown{
+  color: white;
+  background-color: #19173d;
+  border:#19173d;
+  padding: 5px;
+  max-width:60px ;
+}
+
+.optiondrop{
+  margin-top: 40px;
+}
+.ethtext{
+  color: #ffffffcc;
+}
+.tbarrow{
+  color: #ffffffcc;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 3px;
+}
+.arrowdown{
+  color: #ffffffcc;
+}
+.img{
+  width: 100%;
+  max-width: 40px;
 }
