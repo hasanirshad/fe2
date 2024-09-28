@@ -32,6 +32,58 @@ const SelectPare = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+ const PercentageBox = ({ value1, value2 }) => {
+    return (
+      <div className={styles.percentageBoxContainer}>
+        <span>{`${value1}%`}</span>
+        <span>Best for very stable Pairs</span>
+        <span>{`${value2}% Select `}</span>
+      </div>
+    );
+  };
+
+  const PriceRange = ({ priceLable }) => {
+    const [count, setCount] = useState(0);
+  
+    function increment() {
+      setCount((prev) => prev + 1);
+    }
+  
+    function decrement() {
+      setCount((prev) => (prev > 0 ? prev - 1 : 0));
+    }
+  
+    const handleChange = (e) => {
+      const value = e.target.value;
+      // Ensure the input is a number and non-negative
+      if (!isNaN(value) && value >= 0) {
+        setCount(Number(value));
+      }
+    };
+  
+    return (
+      <div className={styles.priceRangeContainer}>
+        <div>
+          <span>{priceLable}</span>
+          <input
+            type="number"
+            value={count}
+            onChange={handleChange}
+            min="0" 
+            className={styles.backGroundNone}
+          />
+          <span>Per</span>
+        </div>
+        <div>
+          <button onClick={increment}>+</button>
+          <button onClick={decrement}>-</button>
+        </div>
+      </div>
+    );
+  };
+  
+
   return (
     <>
       <div className={styles.container}>
@@ -99,37 +151,3 @@ const SelectPare = () => {
 };
 
 export default SelectPare;
-
-export const PercentageBox = ({ value1, value2 }) => {
-  return (
-    <div className={styles.percentageBoxContainer}>
-      <span>{`${value1}%`}</span>
-      <span>Best for very stable Pairs</span>
-      <span>{`${value2}% Select `}</span>
-    </div>
-  );
-};
-
-export const PriceRange = ({ priceLable }) => {
-  const [count, setCount] = useState(0);
-
-  function increment() {
-    setCount((prev) => prev + 1);
-  }
-  function decrement() {
-    count > 0 ? setCount((prev) => prev - 1) : setCount(0);
-  }
-  return (
-    <div className={styles.priceRangeContainer}>
-      <div>
-        <span>{priceLable}</span>
-        <span>{count}</span>
-        <span>Per</span>
-      </div>
-      <div>
-        <button onClick={increment}>+</button>
-        <button onClick={decrement}>-</button>
-      </div>
-    </div>
-  );
-};
