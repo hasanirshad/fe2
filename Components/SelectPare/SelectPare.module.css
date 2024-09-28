@@ -8,6 +8,7 @@
   border: 1px solid #1e1e49eb;
   padding: 1rem;
   margin: 0 auto;
+  position: relative;
 }
 .section1 {
   height: 3rem;
@@ -32,6 +33,7 @@
   height: 58px;
   padding: 1rem;
   gap: 1rem;
+  height: 58px;
 }
 /* .section2 div:nth-of-type(1) img {
 } */
@@ -50,6 +52,7 @@
   border: 1px solid #1e1e49eb;
   padding: 1rem;
   gap: 1rem;
+  height: 58px;
 }
 .section2 div:nth-of-type(2) select {
   background: none;
@@ -163,6 +166,7 @@
 }
 .section5 div:nth-of-type(1) {
   flex: 1;
+  text-align: left;
 }
 .section5 div:nth-of-type(1) span {
   font-family: Inter;
@@ -269,4 +273,37 @@
   opacity: 20%;
   background-color: #0892d0;
   color: #162a69;
+}
+.popup {
+  width: 382px;
+  height: 625px;
+  position: absolute;
+  top: 9rem;
+  left: 26rem;
+  z-index: 99;
+}
+.show {
+  display: flex;
+}
+.hide {
+  display: none;
+  transition: all 0.5s ease-out;
+}
+.boxShow {
+  display: flex;
+  transition: all 0.5s ease-in;
+}
+@media (max-width: 768px) {
+  .section4 {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+  }
+}
+@media (max-width: 425px) {
+  .section2 {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+  }
 }
