@@ -1,199 +1,49 @@
-.container {
-  border-radius: 0;
-  display: flex;
-  max-width: 382px;
-  flex-direction: column;
-  position: absolute;
-  top: 9rem;
-  left: 27rem;
-  z-index: 99;
-}
-.container input {
-  border: none;
-  outline: none;
-  background: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  font-family: Inter;
-  font-size: 14px;
-  font-weight: 400;
-  text-align: left;
-  color: #ffffff66;
-}
-
 .tokenSelectorCard {
+  display: flex;
+  flex-direction: column;
   border-radius: 8px;
   background-color: rgba(30, 30, 72, 1);
-  display: flex;
-  width: 100%;
-  flex-direction: column;
   padding: 23px 20px 14px;
   border: 1px solid rgba(22, 42, 105, 1);
 }
 
-.title {
-  color: #fff;
-  align-self: flex-start;
-  font: 500 16px/2 Inter, sans-serif;
-}
-
-.searchBar {
-  border-radius: 62px;
-  background-color: rgba(22, 42, 105, 1);
-  display: flex;
-  margin-top: 27px;
-  width: 100%;
-  gap: 20px;
-  justify-content: space-between;
-  padding: 10px 16px;
-  border: 1px solid rgba(30, 30, 72, 1);
-}
-
-.searchInput {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  color: rgba(255, 255, 255, 0.4);
-  font: 400 14px/2 Inter, sans-serif;
-}
-
-.icon {
-  aspect-ratio: 1.04;
-  object-fit: contain;
-  object-position: center;
-  width: 24px;
-}
-
-.iconGroup {
-  align-self: flex-start;
-  display: flex;
-  gap: 8px;
-}
-
 .selectedToken {
   display: flex;
-  margin-top: 70px;
-  width: 100%;
-  gap: 20px;
-  font-family: Inter, sans-serif;
-  white-space: nowrap;
+  gap: 14px;
   justify-content: space-between;
+  background-color: rgba(30, 30, 72, 1);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
 }
 
 .tokenInfo {
   display: flex;
   gap: 14px;
-  font-size: 14px;
   color: rgba(255, 255, 255, 0.9);
-  font-weight: 500;
 }
 
-.tokenName {
-  align-self: flex-start;
-}
-
-.tokenSymbol {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 13px;
-  font-weight: 400;
-  align-self: flex-start;
-}
-
-.divider {
+.searchBar {
   background-color: rgba(22, 42, 105, 1);
+  border-radius: 62px;
   display: flex;
-  margin-top: 23px;
-  height: 1px;
+  padding: 10px 16px;
 }
 
 .tokenList {
   display: flex;
-  margin-top: 74px;
-  font-family: Inter, sans-serif;
-  justify-content: space-between;
-}
-
-.tokenColumn {
-  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 500;
+  margin-top: 20px;
 }
 
 .tokenItem {
   display: flex;
   gap: 14px;
-  white-space: nowrap;
-  margin-top: 20px;
+  cursor: pointer;
 }
 
-.tokenItem:first-child {
-  margin-top: 0;
-}
-
-.tokenSymbolColumn {
-  display: flex;
-  flex-direction: column;
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
-  font-weight: 400;
-  justify-content: space-between;
-}
-
-.tokenSymbolItem {
-  /* margin-top: 33px;
-  margin-left: 14px; */
-}
-
-.tokenSymbolItem:first-child {
-  margin-top: 0;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-@media (max-width: 1440px) {
-  .container {
-    width: 20rem;
-    position: absolute;
-    top: 9rem;
-    left: 22rem;
-  }
-}
-@media (max-width: 1024px) {
-  .container {
-    max-width: 224px;
-    position: absolute;
-    top: 9rem;
-    left: 15rem;
-  }
-  .container input {
-    width: 62px;
-  }
-}
-@media (max-width: 768px) {
-  .container {
-    position: absolute;
-    top: 9rem;
-    left: 9rem;
-  }
-}
-@media (max-width: 425px) {
-  .container {
-    position: absolute;
-    top: 16rem;
-    left: 1rem;
-  }
+.tokenItem:hover {
+  background-color: rgba(22, 42, 105, 0.8);
+  border-radius: 8px;
+  padding: 8px;
 }

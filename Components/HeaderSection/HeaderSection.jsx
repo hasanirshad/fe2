@@ -17,7 +17,7 @@ const HeaderSection = () => {
 
   return (
     <header className={styles.header}>
-      <nav className={styles.navBar}>
+      <div className={styles.navBar}>
         <div className={styles.navContainer}>
           <a href="#" className={styles.logo}>
             <img
@@ -69,99 +69,6 @@ const HeaderSection = () => {
                 </div>
               ))}
             </div>
-            {/* <div className={styles.dropdown}>
-              <button className={styles.dropdownButton}>
-                <span>Trade</span>
-                <svg
-                  className={styles.dropdownIcon}
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M19 9L12 16L5 9"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-              <div className={styles.dropdownMenu}>
-                <a href="#" className={styles.dropdownItem}>
-                  Spot
-                </a>
-                <a href="#" className={styles.dropdownItem}>
-                  Margin
-                </a>
-                <a href="#" className={styles.dropdownItem}>
-                  Futures
-                </a>
-              </div>
-            </div>
-
-            <div className={styles.dropdown}>
-              <button className={styles.dropdownButton}>
-                <span>Explore</span>
-                <svg
-                  className={styles.dropdownIcon}
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M19 9L12 16L5 9"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-              <div className={styles.dropdownMenu}>
-                <a href="#" className={styles.dropdownItem}>
-                  NFTs
-                </a>
-                <a href="#" className={styles.dropdownItem}>
-                  DeFi
-                </a>
-                <a href="#" className={styles.dropdownItem}>
-                  Earn
-                </a>
-              </div>
-            </div>
-
-            <div className={styles.dropdown}>
-              <button className={styles.dropdownButton}>
-                <span>Pool</span>
-                <svg
-                  className={styles.dropdownIcon}
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M19 9L12 16L5 9"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-              <div className={styles.dropdownMenu}>
-                <a href="#" className={styles.dropdownItem}>
-                  Liquidity
-                </a>
-                <a href="#" className={styles.dropdownItem}>
-                  Staking
-                </a>
-                <a href="#" className={styles.dropdownItem}>
-                  Farming
-                </a>
-              </div>
-            </div> 
-
-            <a href="#" className={styles.link}>
-              Stake
-            </a>*/}
             <a href="#" className={`${styles.link} ${styles.borderLeft}`}>
               Connect Wallet
             </a>
@@ -176,11 +83,7 @@ const HeaderSection = () => {
           </div>
           <MobileMenu />
         </div>
-
-        <div className={styles.divider}>
-          <div className={styles.gradientLine}></div>
-        </div>
-      </nav>
+      </div>
     </header>
   );
 };

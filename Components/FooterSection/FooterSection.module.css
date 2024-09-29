@@ -1,6 +1,5 @@
 .footer {
   width: 100%;
-  background-color: #1e3a8a;
   position: relative;
 }
 
@@ -41,22 +40,34 @@
 }
 
 .heading {
-  font-size: 1.875rem;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Outfit";
   margin-bottom: 0.5rem;
+  line-height: 42.32px;
 }
 
 .subheading {
-  color: #38bdf8;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 20px;
   margin-bottom: 1rem;
+  line-height: 24px;
+  color: #ffffffcc;
 }
 
 .getStartedButton {
-  background-color: #0284c7;
-  color: white;
-  font-weight: bold;
-  padding: 0.375rem 1rem;
-  border-radius: 0.375rem;
+  width: 151px;
+  height: 36px;
+  top: 212px;
+  left: 57px;
+  gap: 0px;
+  border-radius: 4px 0px 0px 0px;
+  opacity: 0px;
+  background: #0892d0;
+  backdrop-filter: blur(18.55470085144043px);
+
+  box-shadow: 0px 12px 14px 0px #201e4281;
 }
 
 .getStartedButton:hover {
@@ -86,7 +97,10 @@
 .logo {
   background-color: white;
   padding: 0.5rem;
+  width: 60px;
+  height: 45px;
   border-radius: 0.375rem;
+  margin-bottom: 1rem;
 }
 
 .navItem,
@@ -237,6 +251,9 @@
 .footerLinkTitle {
   /* Footer link title styles */
   font-size: 1.2rem;
+  font-size: 20px;
+  font-weight: 800;
+  color: #0892d0;
   font-weight: bold;
   margin-bottom: 1rem;
 }
@@ -309,10 +326,9 @@
   display: flex;
   justify-content: space-between;
   margin-top: 0.1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
   font-size: 0.7rem;
   /* margin: 0 auto; */
+  padding: 2rem;
   align-items: center;
   color: #fff;
   height: 1rem;
@@ -339,9 +355,21 @@
 }
 .rightBottomItems {
   gap: 16px;
-  &:hover {
-    color: #03b0f4; /* Light blue color */
-  }
-  border-right: 1px solid #03b0f4; /* Darker blue border */
+  position: relative; /* To position the pseudo-element */
   padding: 8px;
+}
+
+.rightBottomItems::after {
+  content: ""; /* Empty content to create the border */
+  position: absolute;
+  right: 0;
+  top: 50%; /* Start at the vertical center */
+  height: 16px; /* Adjust the height of the tiny border */
+  width: 1px; /* Make the border narrow */
+  background-color: #03b0f4; /* Darker blue color for the border */
+  transform: translateY(-50%); /* Vertically center the tiny border */
+}
+
+.rightBottomItems:hover {
+  color: #03b0f4; /* Light blue color on hover */
 }

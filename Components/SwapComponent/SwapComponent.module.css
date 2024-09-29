@@ -1,5 +1,5 @@
 /* Google Inter Font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 .swapContainer {
   border-radius: 0;
@@ -152,6 +152,7 @@
   stroke: var(--Secondary-color, #162a69);
   padding: 25px 70px;
   font: 500 24px/1 Inter, sans-serif;
+  font-size: 32px;
   border: 1px solid #162a69;
   color: white;
 }
@@ -176,14 +177,14 @@
 }
 
 /* Dropdown */
-.maindropdown{
+.maindropdown {
   position: relative;
 }
-.maindropdown ul{
-  position:absolute;
+.maindropdown ul {
+  position: absolute;
   list-style: none;
-  border: 1px solid #162A69;
-  background-color:  #1E1E48;
+  border: 1px solid #162a69;
+  background-color: #1e1e48;
   color: white;
   width: 382px;
   z-index: 1;
@@ -191,56 +192,54 @@
   /* margin-left: 180px; */
   /* margin-top: -380px; */
 }
-.maindropdown ul p{
+.maindropdown ul p {
   text-align: start;
-  background-color: #1E1E48;
+  background-color: #1e1e48;
   margin-top: 30px;
   margin-left: 20px;
   font-family: "Inter";
   font-weight: 500;
-
 }
-.maindropdown ul li{
+.maindropdown ul li {
   display: flex;
   justify-content: space-between;
   padding: 10px;
   cursor: pointer;
-  background-color: #1E1E48;
+  background-color: #1e1e48;
   text-align: start;
   color: white;
   margin-top: 20px;
   margin-left: 20px;
-  
 }
-.maindropdown .dropdownbutton{
+.maindropdown .dropdownbutton {
   background-color: transparent;
   color: white;
   width: 131px;
   height: 45.35px;
-  border: 1px solid #162A69;
+  border: 1px solid #162a69;
 }
-.maindropdown ul .searchinput{
+.maindropdown ul .searchinput {
   margin-top: 10px;
   padding: 20px;
-  width: 342px ;
+  width: 342px;
   height: 44.8px;
   border-radius: 62px;
-  border: 1px solid #1E1E48;
-  background-color: #162A69;
+  border: 1px solid #1e1e48;
+  background-color: #162a69;
   color: white;
 }
-.maindropdown ul .searchinput::placeholder{
+.maindropdown ul .searchinput::placeholder {
   size: 14px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 400;
   color: white;
 }
-.maindropdown .spandesc{
+.maindropdown .spandesc {
   font-size: 13px;
   font-weight: 400;
   font-family: "Inter";
   justify-content: end;
   text-align: end;
   align-items: end;
-  opacity: .5;
+  opacity: 0.5;
 }

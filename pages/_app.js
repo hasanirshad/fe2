@@ -1,23 +1,20 @@
-// pages/_app.js
-import React from 'react';
-import '../styles/globals.css'; // Optional
+import React from "react";
+import "../styles/globals.css";
 import "../Components/HomePageComponents/HomePageIndex.css";
+import { Inter, Outfit } from "next/font/google";
+import { FooterSection, HeaderSection } from "../Components/index";
 
-//imported from the components we created
-import {
-  FooterSection,
-  HeaderSection,
-} from "../Components/index";
-import Pool from './pool';
+const inter = Inter({ subsets: ["latin"] });
+const outfit = Outfit({ subsets: ["latin"] });
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
-    <HeaderSection />
-    <Component {...pageProps} />
-    <FooterSection></FooterSection>
+    <div className={`${inter.className} ${outfit.className}`}>
+      <HeaderSection />
+      <Component {...pageProps} />
+      <FooterSection></FooterSection>
     </div>
-    );
+  );
 }
 
 export default MyApp;
