@@ -1,33 +1,50 @@
 /* NavBar.module.css */
 .header {
   text-align: left;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #211f45;
   z-index: 9999999999999;
+  width: 100%;
+  height: 74px;
+  position: relative;
 }
-
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Adjust height to simulate the thickness of the border */
+  background: linear-gradient(
+    to right,
+    transparent,
+    #808080,
+    transparent
+  ); /* Gradient effect */
+}
 .navBar {
   z-index: 9999999999999;
-  background: linear-gradient(to right, #1b3560, #1f204a);
-  padding-top: 0.5rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-@media (min-width: 768px) {
-  .navBar {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+  width: 100%;
+  display: block;
 }
 
 .navContainer {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
 
 .logo {
   text-decoration: none;
   color: white;
+  width: 36px;
+  height: 31px;
   font-weight: bold;
 }
 
@@ -53,6 +70,9 @@
 
 .link {
   color: white;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 14px;
   transition: color 0.3s;
 }
 
@@ -136,12 +156,10 @@
 }
 
 .divider {
-  margin-top: 0.5rem;
+  margin-top: 2rem;
 }
 
 .gradientLine {
-  height: 0.125rem;
-  background: linear-gradient(to right, transparent, #808080, transparent);
 }
 
 .NavBar_Box_left_Menu_Items {

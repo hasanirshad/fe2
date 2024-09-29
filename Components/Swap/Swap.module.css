@@ -177,6 +177,7 @@
   font: 500 24px/1 Inter, sans-serif;
   border: 1px solid #162a69;
   text-align: center;
+  cursor: auto;
   color: white;
 }
 .amountInput::placeholder {
@@ -202,7 +203,13 @@
 }
 .buyinput {
   background-color: transparent;
-  color: white;
+  font-size: 32px;
+  border: none;
+}
+
+.buyinput:focus {
+  outline: none; /* Prevent any focus border or outline */
+  border-color: transparent; /* Ensure no border shows on focus */
 }
 .buyinput::placeholder {
   color: white;

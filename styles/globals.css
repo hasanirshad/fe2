@@ -15,8 +15,8 @@ body {
     "Helvetica Neue", Arial, sans-serif;
   background: #19173d;
   color: #ffffff;
-  height: 200%; /* Ensure the background covers the full height */
   width: 100%; /* Ensure the background covers the full width */
+  /* Very light/transparent blue fades out by 30% */
 }
 
 h1,
@@ -43,6 +43,6 @@ button {
   cursor: pointer;
   font-family: inherit;
 }
-.black-font{
+.black-font {
   color: black !important;
 }

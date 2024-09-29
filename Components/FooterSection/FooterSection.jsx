@@ -4,7 +4,6 @@ import styles from "./FooterSection.module.css";
 import footerBackground from "../../public/Assets/Footer_Background.png";
 import coin from "../../public/Assets/coins.png";
 import logo from "../../public/svgs/logo.svg";
-import { textFieldClasses } from "@mui/material";
 
 const FooterSection = () => {
   return (
@@ -13,7 +12,6 @@ const FooterSection = () => {
         className={styles.footerBackground}
         src={footerBackground}
         alt="Footer background"
-        width={768}
       />
 
       <div className={styles.content}>
@@ -136,21 +134,25 @@ const FooterSection = () => {
         </div>
         <div className={styles.rightsAndPolicy}>
           <div className={styles.left}>
-            <a>© 2024, All Rights Reserved.</a>
+            <div className="text-[14px] font-light">
+              <a>© 2024, All Rights Reserved.</a>
+            </div>
           </div>
           <div className={styles.right}>
-            <a href="#" className={styles.rightBottomItems}>
-              Sitemap
-            </a>
-            <a href="#" className={styles.rightBottomItems}>
-              Privacy Policy
-            </a>
-            <a href="#" className={styles.rightBottomItems}>
-              IMAP Policy
-            </a>
-            <a href="#" className={styles.rightBottomItems}>
-              Terms &amp; Conditions
-            </a>
+            <div className="text-[14px] font normal ">
+              <a href="#" className={styles.rightBottomItems}>
+                Sitemap
+              </a>
+              <a href="#" className={styles.rightBottomItems}>
+                Privacy Policy
+              </a>
+              <a href="#" className={styles.rightBottomItems}>
+                IMAP Policy
+              </a>
+              <a href="#" className={styles.rightBottomItems}>
+                Terms &amp; Conditions
+              </a>
+            </div>
           </div>
         </div>
       </div>
