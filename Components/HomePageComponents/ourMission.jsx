@@ -1,10 +1,11 @@
 import React from "react";
 import Image from 'next/image';
 import mission from "../../public/Assets/HomePageAssets/mission.png";
+import { Black_And_White_Picture } from 'next/font/google';
 
 export const OurMission = () => {
   return (
-    <section className="flex flex-col justify-center items-center px-4 py-16 md:px-8 lg:px-16">
+    <section className="flex flex-col justify-center items-center px-4 py-16 md:px-8 lg:px-16" style={{ backgroundColor: "white" }}>
       <div className="flex flex-wrap justify-center  md:space-y-0 gap-4">
         {/* Card 1 */}
         <div className="bg-white shadow-md rounded-lg p-6 flex flex-col justify-between w-full sm:w-72 md:w-1/2 lg:w-72">

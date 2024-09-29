@@ -2,7 +2,7 @@ import React from "react";
 
 export const ETFSwap = () => {
     return (
-      <section className="w-full md:px-12 lg:px-20 py-16">
+      <section className="w-full md:px-12 lg:px-20 py-16" style={{ backgroundColor: "white" }}>
       {/* Header Text */}
       <div className="flex  justify-center max-w-5xl space-x-3 lg:space-x-36 items-center w-full text-center py-8">
         <h2 className="md:text-5xl font-bold text-blue-900">WHY USE ETFSWAP?</h2>

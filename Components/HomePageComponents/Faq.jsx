@@ -2,7 +2,7 @@ import React from "react";
 
 export const Faq = () => {
     return (
-      <section className="w-full md:px-28 py-16">
+      <section className="w-full md:px-28 py-16" style={{ backgroundColor: "white" }}>
       <div className="max-w-6xl mx-auto p-4">
         <h1 className="md:text-5xl py-8 font-bold text-center mb-6 text-blue-900 flex items-center justify-center">
           FREQUENTLY ASKED QUESTIONS{" "}

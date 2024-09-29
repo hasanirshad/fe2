@@ -5,7 +5,7 @@ import card3 from "../../public/Assets/HomePageAssets/card-3.png";
 
 export const LastestBlog = () => {
   return (
-    <section className="w-full md:px-14 px-2 lg:px-28 py-16">
+    <section className="w-full md:px-14 px-2 lg:px-28 py-16" style={{ backgroundColor: "white" }}>
       <div className="header w-full text-center font-bold text-5xl py-10 text-[#001447]">
         <h1>Latest Blogs</h1>
       </div>

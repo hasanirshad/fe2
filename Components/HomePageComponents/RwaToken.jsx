@@ -3,7 +3,7 @@ import React from "react";
 export const RwaToken = () => {
     return (
       
-<section className="lg:py-12 pr-4 py-28">
+<section className="lg:py-12 pr-4 py-28" style={{ backgroundColor: "white" }}>
   <div className="text-center">
     <h1 className="text-xl font-bold text-blue-900 mb-4">RWA TOKENIZATION</h1>
     <div className="flex items-center flex-col justify-center">
