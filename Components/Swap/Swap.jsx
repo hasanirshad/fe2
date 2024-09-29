@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styles from "../Swap/Swap.module.css";
 import TokenInfo from "./SwapTokenInfo";
-import { TokenSelector } from "..";
+import {  TokenSelector } from "../../Components/index.js";
+
 
 const Swap = () => {
   const [buy, setBuy] = useState("");

@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-
 import TokenSelector from "../TokenSelector/TokenSelector";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 
@@ -19,6 +18,7 @@ const SelectPare = () => {
       setValue(false);
     }
   };
+  
 
   function handleShow() {
     setValue((prev) => !prev);
@@ -30,10 +30,14 @@ const SelectPare = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+  
 
   return (
     <>
-      <div className="w-[820px] h-[701px] rounded-[8px] p-6 flex flex-col  border bg-[#1E1E49EB] border-[#162A69]">
+      <div
+        className="w-[820px] h-[701px] rounded-[8px] p-6 flex flex-col border bg-[#1E1E49EB] border-[#162A69]"
+        style={{ height: "auto" }}
+      >
         <span className="text-left mb-2">Select Pair</span>
         <div className="flex flex-row gap-2 mb-2">
           <div className="bg-transparent flex items-center gap-4 rounded-[8px] w-[382px] border border-[#162A69] p-2 ">
@@ -56,7 +60,7 @@ const SelectPare = () => {
         </div>
 
         {value && (
-          <div className="flex gap-2 ">
+          <div className="flex gap-2">
             {/* Render PercentageBox components */}
             {["0.01", "0.05", "0.30", "1.00"].map((val, index) => (
               <PercentageBox
@@ -70,13 +74,13 @@ const SelectPare = () => {
           </div>
         )}
 
-        <div className="flex justify-between p-1 rounded-[4px] ">
+        <div className="flex justify-between p-1 rounded-[4px]">
           <span className="text-[16px] font-[Inter] font-bold">
             Set Price Range
           </span>
           <div className="flex gap-2 p-2 border border-[#162A69]">
             <span>1INCH</span>
-            <span className="bg-[#162A69] ">ETH</span>
+            <span className="bg-[#162A69]">ETH</span>
           </div>
         </div>
         <div className="flex flex-col space-y-4 p-2">
@@ -118,8 +122,14 @@ export const PriceRange = ({ priceLable }) => {
   function increment() {
     setCount((prev) => prev + 1);
   }
+
   function decrement() {
     count > 0 ? setCount((prev) => prev - 1) : setCount(0);
+  }
+
+  function handleInputChange(e) {
+    const value = parseInt(e.target.value, 10);
+    setCount(isNaN(value) || value < 0 ? 0 : value); // Ensure the value is valid
   }
 
   return (
@@ -134,7 +144,18 @@ export const PriceRange = ({ priceLable }) => {
             +
           </button>
         </div>
-        <span className="text-left">{count}</span>
+        <input
+  type="text"
+  className="w-[100%] appearance-none bg-transparent border-none outline-none ${styles.noSpinner}"
+  value={count}
+  onChange={handleInputChange}
+  style={{
+    textAlign: "left",
+    WebkitAppearance: "none", // For Chrome, Safari, Opera
+    MozAppearance: "textfield", // For Firefox
+    appearance: "textfield", // Generic appearance removal
+  }}
+/>
         <div className="flex justify-between">
           <span>Per</span>
           <button

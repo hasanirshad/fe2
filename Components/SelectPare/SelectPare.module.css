@@ -7,3 +7,24 @@
   justify-content: center;
   align-items: center;
 }
+
+/* PriceRange.module.css */
+
+/* Hide spinner buttons in Chrome, Safari, Edge, and Opera */
+.noSpinner::-webkit-outer-spin-button,
+.noSpinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide spinner buttons in Firefox */
+.noSpinner {
+  -moz-appearance: textfield;
+}
+
+/* Ensure the spinner is hidden on hover in WebKit browsers (Chrome, Safari, etc.) */
+.noSpinner[type="number"]::-webkit-inner-spin-button,
+.noSpinner[type="number"]::-webkit-outer-spin-button {
+  opacity: 0;
+  display: none;
+}
