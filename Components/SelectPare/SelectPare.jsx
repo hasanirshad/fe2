@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import styles from "./SelectPare.module.css";
+
 import TokenSelector from "../TokenSelector/TokenSelector";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 
