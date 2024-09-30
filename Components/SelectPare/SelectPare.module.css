@@ -102,5 +102,21 @@
   cursor: pointer;
 }
 
+.stakeButton {
+  width: 100%;
+    padding: 10px;
+    border: none;
+    height: 47px;
+    background-color: #0892D0;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.stakeButton:hover {
+  color: skyblue; /* Change text color on hover */
+}
+
 
 

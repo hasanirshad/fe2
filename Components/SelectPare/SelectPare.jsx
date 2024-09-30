@@ -4,6 +4,7 @@ import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import styles from "./SelectPare.module.css";
 import Image from 'next/image'
 import wallet from "../../public/Assets/Wallet.png";
+import usdt from "../../public/Assets/usdt_green.png";
 
 
 const tokenData = [
@@ -79,7 +80,7 @@ const SelectPare = () => {
         className="w-[820px] h-[701px] rounded-[8px] p-6 flex flex-col border bg-[#1E1E49EB] border-[#162A69]"
         style={{ height: "auto", margin: "auto" }}
       >
-        <span className="text-left mb-2 text-[16px] font-[500] font-['Inter']">Select Pair</span>
+        <span className="text-left mb-2 text-[16px] font-[500] font-['Inter']">Pool Pair</span>
         <div className="flex flex-row gap-2 mb-2">
           <div className="bg-transparent flex items-center gap-4 rounded-[8px] w-[382px] border border-[#162A69] p-2 ">
             <img
@@ -89,7 +90,14 @@ const SelectPare = () => {
             />
             <span className="text-[20px] font-[500] font-['Inter']">ETFSwap</span>
           </div>
-          <TokenSelector tokenData={tokenData} setselectedItemCallBack={setSelectedToken}></TokenSelector>
+          <div className="bg-transparent flex items-center gap-4 rounded-[8px] w-[382px] border border-[#162A69] p-2 ">
+            <img
+              className="w-[49px] h-[44px]"
+              src="Assets/usdt_green.png"
+              alt="loading..."
+            />
+            <span className="text-[20px] font-[500] font-['Inter']">USDT</span>
+          </div>
         </div>
 
         <div className="flex text-left justify-between pr-4 mb-2">
@@ -107,77 +115,26 @@ const SelectPare = () => {
               <PercentageBox
                 key={index}
                 value1={val}
-                value2={index === selectedBox ? "Selected" : "0"}
+                value2={index === selectedBox ? "Selected" : ""}
                 isSelected={index === selectedBox}
                 onClick={() => setSelectedBox(index)}
               />
             ))}
           </div>
         )}
-        {value && (<div className={styles.PoolAdd_box_price_right}>
-          <h4 className="font-[Inter] font-[500] text-[16px]">Set Price Range</h4>
-          <div className={styles.PoolAdd_box_price_right_box} >
-            <p className={styles.PoolAdd_box_price_right_box_para}>
-              Current Price: 41.1494 {"ETH"} per{" "}
-              {"Select"}
-            </p>
-            <Image src={wallet} alt="wallet" height={80} width={80} />
-            <h3>Your position will appear here.</h3>
-          </div>
-
-          {/* //PRICE RANGE */}
-
-          <div className={styles.PoolAdd_box_price_right_range}>
-            <div className={styles.PoolAdd_box_price_right_range_box}>
-              <p>Min Price</p>
-              <input
-                type="number"
-                placeholder="0.000"
-                min="0.00"
-                step="0.001"
-                className={styles.PoolAdd_box_price_right_range_box_para}
-                onChange={(e) => setMinPrice(e.target.value)}
-              />
-              <p>
-                {"ETH"} per {"Select"}
-              </p>
-            </div>
-            {/* //MAX */}
-            <div className={styles.PoolAdd_box_price_right_range_box}>
-              <p>Max Price</p>
-              <input
-                type="number"
-                placeholder="0.000"
-                min="0.00"
-                step="0.001"
-                className={styles.PoolAdd_box_price_right_range_box_para}
-                onChange={(e) => setMaxPrice(e.target.value)}
-              />
-              <p>
-                {" "}
-                {"ETH"} per {"Select"}
-              </p>
-            </div>
-          </div>
-
-          {/* BUTTON */}
-        </div>)}
-
-
-
         <div className="flex justify-between p-1 rounded-[4px]">
           <span className="text-[16px] font-[Inter] font-[500]">
-            Set Price Range
+            Enter USDT (value in USDT)
           </span>
           <div className="flex gap-2 p-2 border border-[#162A69]">
-            <span className="text-[14px] font-[Inter] font-[400]">1INCH</span>
-            <span className="bg-[#162A69] text-[14px] font-[Inter] font-[500]">ETH</span>
+            <span className="text-[14px] font-[Inter] font-[400]">USDT</span>
+            <span className="bg-[#162A69] text-[14px] font-[Inter] font-[500]">ETFS</span>
           </div>
         </div>
         <div className="flex flex-col space-y-4 p-2 pricerange">
-          <PriceRange className="lowprice" priceLable="Low Price" />
-          <PriceRange priceLable="High Price" />
-        </div>
+          <PriceRange className="lowprice" priceLable="" />
+          <button className={styles.stakeButton}>Add Liquidity</button>
+          </div>
       </div>
     </>
   );
@@ -195,7 +152,7 @@ export const PercentageBox = ({ value1, value2, isSelected, onClick }) => {
     >
       <span className="text-[Inter] font-[500] text-[16px]">{`${value1}%`}</span>
       <span className="text-[14px] font-[400] text-[Inter] text-[#FFFFFFCC]">Best for very stable Pairs</span>
-      <span className="text-[12px] font-[400] text-[#FFFFFFE5]">{`${value2} Select `}</span>
+      <span className="text-[12px] font-[400] text-[#FFFFFFE5]">{`${value2} `}</span>
 
       {/* Show check icon on top-right corner if selected */}
       {isSelected && (
@@ -248,7 +205,7 @@ export const PriceRange = ({ priceLable }) => {
   }}
 />
         <div className="flex justify-between">
-          <span className="text-[14px] font-[400]">Per</span>
+          <span className="text-[14px] font-[400]"></span>
           <button
             className="text-[#162A69] text-center h-[20px] w-[20px] bg-[#0892D0]"
             onClick={decrement}

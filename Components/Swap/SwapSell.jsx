@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import styles from "../Swap/Swap.module.css";
+import styles from "../Swap/SwapSell.module.css";
 import TokenInfo from "./SwapTokenInfo";
 import {  TokenSelector, SwapInput } from "../../Components/index.js";
 import Image from 'next/image';
 import swapBackground from '../../public/Assets/swap_back.png'
 
-const Swap = ({Sell, Buy, title="sell"}) => {
+const SwapSell = ({Sell, Buy, title="sell"}) => {
   const [dropdownBuy, setDropdownBuy] = useState(Buy);
   const [dropdownSell, setDropdownSell] = useState(Sell);
   const [buy, setBuy] = useState("");
@@ -68,10 +68,10 @@ const Swap = ({Sell, Buy, title="sell"}) => {
           // value={error !== "" ? error : "Enter amount"}
           value="Enter Amount"
         />
-        <button className={styles.stakeButton}>Buy ETFS</button>
+        <button className={styles.stakeButton}>Sell ETFS</button>
       </form>
     </main>
   );
 };
 
-export default Swap;
+export default SwapSell;
