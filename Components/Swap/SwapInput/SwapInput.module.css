@@ -22,6 +22,7 @@
     text-align: left;
     font-size: 20px;
     font-weight: 400;
+    font-family: "Inter", sans-serif;
   }
   
   .inputColumn {
@@ -46,7 +47,9 @@
   .balanceText {
     color: white;
     text-align: right;
-    font-size: 14px;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
   }
   .input {
     background-color: transparent; /* No background */

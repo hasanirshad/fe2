@@ -27,6 +27,9 @@
 .selectedText {
   flex: 1; 
   text-align: left;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
 }
 
 .selectTrigger:hover {

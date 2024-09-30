@@ -79,7 +79,7 @@ const SelectPare = () => {
         className="w-[820px] h-[701px] rounded-[8px] p-6 flex flex-col border bg-[#1E1E49EB] border-[#162A69]"
         style={{ height: "auto", margin: "auto" }}
       >
-        <span className="text-left mb-2">Select Pair</span>
+        <span className="text-left mb-2 text-[16px] font-[500] font-['Inter']">Select Pair</span>
         <div className="flex flex-row gap-2 mb-2">
           <div className="bg-transparent flex items-center gap-4 rounded-[8px] w-[382px] border border-[#162A69] p-2 ">
             <img
@@ -87,17 +87,17 @@ const SelectPare = () => {
               src="svgs/logo.svg"
               alt="loading..."
             />
-            <span>ETFSwap</span>
+            <span className="text-[20px] font-[500] font-['Inter']">ETFSwap</span>
           </div>
           <TokenSelector tokenData={tokenData} setselectedItemCallBack={setSelectedToken}></TokenSelector>
         </div>
 
         <div className="flex text-left justify-between pr-4 mb-2">
           <div className="flex flex-col space-y-2 ">
-            <span className="font-[Inter] font-bold text-[16px]">Fee tier</span>
-            <span>The % you will earn in fees.</span>
+            <span className="font-[Inter] font-[500] text-[16px]">Fee tier</span>
+            <span className="font-[Inter] font-[400] text-[14px]">The % you will earn in fees.</span>
           </div>
-          <button onClick={handleShow}>{value ? "Hide" : "Show"}</button>
+          <button className="font-[Inter] font-[400] text-[14px]" onClick={handleShow}>{value ? "Hide" : "Show"}</button>
         </div>
 
         {value && (
@@ -115,8 +115,8 @@ const SelectPare = () => {
           </div>
         )}
         {value && (<div className={styles.PoolAdd_box_price_right}>
-          <h4>Set Price Range</h4>
-          <div className={styles.PoolAdd_box_price_right_box}>
+          <h4 className="font-[Inter] font-[500] text-[16px]">Set Price Range</h4>
+          <div className={styles.PoolAdd_box_price_right_box} >
             <p className={styles.PoolAdd_box_price_right_box_para}>
               Current Price: 41.1494 {"ETH"} per{" "}
               {"Select"}
@@ -166,16 +166,16 @@ const SelectPare = () => {
 
 
         <div className="flex justify-between p-1 rounded-[4px]">
-          <span className="text-[16px] font-[Inter] font-bold">
+          <span className="text-[16px] font-[Inter] font-[500]">
             Set Price Range
           </span>
           <div className="flex gap-2 p-2 border border-[#162A69]">
-            <span>1INCH</span>
-            <span className="bg-[#162A69]">ETH</span>
+            <span className="text-[14px] font-[Inter] font-[400]">1INCH</span>
+            <span className="bg-[#162A69] text-[14px] font-[Inter] font-[500]">ETH</span>
           </div>
         </div>
-        <div className="flex flex-col space-y-4 p-2">
-          <PriceRange priceLable="Low Price" />
+        <div className="flex flex-col space-y-4 p-2 pricerange">
+          <PriceRange className="lowprice" priceLable="Low Price" />
           <PriceRange priceLable="High Price" />
         </div>
       </div>
@@ -193,9 +193,9 @@ export const PercentageBox = ({ value1, value2, isSelected, onClick }) => {
       }`}
       onClick={onClick}
     >
-      <span className="text-[Inter] font-bold text-[16px]">{`${value1}%`}</span>
-      <span className="text-[14px] font-light">Best for very stable Pairs</span>
-      <span>{`${value2} Select `}</span>
+      <span className="text-[Inter] font-[500] text-[16px]">{`${value1}%`}</span>
+      <span className="text-[14px] font-[400] text-[Inter] text-[#FFFFFFCC]">Best for very stable Pairs</span>
+      <span className="text-[12px] font-[400] text-[#FFFFFFE5]">{`${value2} Select `}</span>
 
       {/* Show check icon on top-right corner if selected */}
       {isSelected && (
@@ -227,7 +227,7 @@ export const PriceRange = ({ priceLable }) => {
     <div className="w-full h-[120px] rounded-[8px] bg-[#162A69] p-3">
       <div className="flex flex-col space-y-3">
         <div className="flex justify-between">
-          <span>{priceLable}</span>
+          <span className="text-[14px] font-[inter] font-[400] text-[#FFFFFFCC]">{priceLable}</span>
           <button
             className="text-[#162A69] text-center h-[20px] w-[20px] bg-[#0892D0]"
             onClick={increment}
@@ -237,7 +237,7 @@ export const PriceRange = ({ priceLable }) => {
         </div>
         <input
   type="text"
-  className="w-[100%] appearance-none bg-transparent border-none outline-none ${styles.noSpinner}"
+  className="w-[100%] appearance-none bg-transparent border-none outline-none ${styles.noSpinner} text-[20px] font-[500]"
   value={count}
   onChange={handleInputChange}
   style={{
@@ -248,7 +248,7 @@ export const PriceRange = ({ priceLable }) => {
   }}
 />
         <div className="flex justify-between">
-          <span>Per</span>
+          <span className="text-[14px] font-[400]">Per</span>
           <button
             className="text-[#162A69] text-center h-[20px] w-[20px] bg-[#0892D0]"
             onClick={decrement}

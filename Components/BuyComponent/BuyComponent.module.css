@@ -14,9 +14,10 @@
 }
 .textp1 {
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 28px;
   color: #ffffffcc;
+  font-family: "Inter", sans-serif;
 }
 .textp2 {
   font-family: Inter;
@@ -66,6 +67,9 @@
   border: #19173d;
   padding: 5px 20px;
   margin: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
 }
 .sectionfour {
   background-color: #1e1e49eb;

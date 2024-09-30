@@ -15,7 +15,7 @@
   display: flex;
   justify-content: space-around;
   width: 820px;
-  border-bottom: 1px solid #1f398b;
+  border-bottom: 1px solid #1F398B;
   margin-bottom: 20px;
 }
 
@@ -25,9 +25,8 @@
   background-color: transparent;
   border: none;
   color: white;
-  font-weight: 500;
-  font-size: 20px;
-  font-family: "Inter";
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-size: 20px;
 }
@@ -36,7 +35,7 @@
 .activeTab {
   background-color: transparent;
   border: none;
-  color: #0892d0;
+  color: #0892D0;
   font-size: 20px;
   font-family: "Inter", sans-serif;
   font-weight: 500;
