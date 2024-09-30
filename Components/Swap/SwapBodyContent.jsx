@@ -1,46 +1,47 @@
 import React, { useState } from "react";
 import styles from "../Swap/SwapBodyConten.module.css";
-import { FaCog } from "react-icons/fa"; 
-
+import { FaCog, FaExchangeAlt, FaMoneyBillAlt, FaUsers, FaArrowUp, FaArrowDown } from "react-icons/fa"; 
 import {
-  AddLiquidity,
-  SwapComponent,
-  StakingComponent,
-  PoolAdd,
+  SelectPare,
   Swap,
   Staking,
   SendComponent,
-  SelectPare,
-  Stake,
+  BuyComponent,
 } from "../";
-import BuyComponent from "../BuyComponent/BuyComponent";
 import Image from "next/image";
-import topleftcornerimage from "../../public/Assets/Pathner.png";
+import SmalllightBulb from "./smalllightbulb.png";
 import lineimge from "../../public/Assets/RisingLine.png";
 import shadowball from "../../public/Assets/OrangeShadow.png";
 import orangeball from "../../public/Assets/OrangeBall.png";
-
 import rightshadowball from "../../public/Assets/PurpleShadow.png";
 import blueball from "../../public/Assets/PurpleBall.png";
+import topleftcornerimage from "../../public/Assets/Pathner.png";
+const tabData = [
+  { key: "pool", label: "Pool", image: SmalllightBulb },
+  { key: "swap", label: "Swap", image: SmalllightBulb },
+  { key: "stake", label: "Stake", image: SmalllightBulb },
+  { key: "buy", label: "Sell", image: SmalllightBulb },
+  { key: "sell", label: "Buy", image: SmalllightBulb },
+];
 
 const SwapBodyContent = () => {
   const [activeTab, setActiveTab] = useState("pool");
-  const [showSettings, setShowSettings] = useState(false); // State to handle the popup visibility
+  const [showSettings, setShowSettings] = useState(false);
 
   const renderContent = () => {
     switch (activeTab) {
       case "pool":
-        return <SelectPare></SelectPare>;
+        return <SelectPare />;
       case "swap":
-        return <Swap></Swap>;
+        return <Swap />;
       case "stake":
-        return <Staking></Staking>;
+        return <Staking />;
       case "buy":
-        return <SendComponent></SendComponent>;
+        return <SendComponent />;
       case "sell":
-        return <BuyComponent></BuyComponent>;
+        return <BuyComponent />;
       default:
-        return <div></div>;
+        return <div />;
     }
   };
 
@@ -57,43 +58,26 @@ const SwapBodyContent = () => {
         {/* Tabs */}
         <div className={styles.tabflex}>
           <div className={styles.tabs}>
-            <button
-              className={activeTab === "pool" ? styles.activeTab : styles.tab}
-              onClick={() => setActiveTab("pool")}
-            >
-              Pool
-            </button>
-            <button
-              className={activeTab === "swap" ? styles.activeTab : styles.tab}
-              onClick={() => setActiveTab("swap")}
-            >
-              Swap
-            </button>
-            <button
-              className={activeTab === "stake" ? styles.activeTab : styles.tab}
-              onClick={() => setActiveTab("stake")}
-            >
-              Stake
-            </button>
-            <button
-              className={activeTab === "buy" ? styles.activeTab : styles.tab}
-              onClick={() => setActiveTab("buy")}
-            >
-              Sell
-            </button>
-            <button
-              className={activeTab === "sell" ? styles.activeTab : styles.tab}
-              onClick={() => setActiveTab("sell")}
-            >
-            Buy
-            </button>
-
+            {tabData.map(({ key, label, image }) => (
+              <div key={key} className={styles.tabContainer}>
+                <button
+                  className={activeTab === key ? styles.activeTab : styles.tab}
+                  onClick={() => setActiveTab(key)}
+                >
+                  {label}
+                </button>
+                {/* Render image only for the active tab */}
+                {activeTab === key && (
+                  <Image src={image} alt={`${label} image`} className={styles.tabImage} />
+                )}
+              </div>
+            ))}
             {/* Settings Button */}
             <button
               className={styles.settingsButton}
               onClick={() => setShowSettings(!showSettings)}
             >
-              <FaCog className={styles.icon} /> {/* Settings Icon */}
+              <FaCog className={styles.icon} />
             </button>
           </div>
         </div>
