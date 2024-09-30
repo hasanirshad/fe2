@@ -1,6 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import TokenSelector from "../TokenSelector/TokenSelector";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
+import styles from "./SelectPare.module.css";
+import Image from 'next/image'
+import wallet from "../../public/Assets/Wallet.png";
+
+
 const tokenData = [
   {
     name: 'Ox Protocol',
@@ -35,7 +40,7 @@ const tokenData = [
 ];
 const SelectPare = () => {
   const [selectedBox, setSelectedBox] = useState(null); // To manage selected box
-  const [value, setValue] = useState(true); // To manage hide/show
+  const [value, setValue] = useState(false); // To manage hide/show
   const dropdownRef = useRef(null);
   const tokenSelectorRef = useRef(null);
   const [selectedToke, setSelectedToken] = useState({
@@ -109,6 +114,56 @@ const SelectPare = () => {
             ))}
           </div>
         )}
+        {value && (<div className={styles.PoolAdd_box_price_right}>
+          <h4>Set Price Range</h4>
+          <div className={styles.PoolAdd_box_price_right_box}>
+            <p className={styles.PoolAdd_box_price_right_box_para}>
+              Current Price: 41.1494 {"ETH"} per{" "}
+              {"Select"}
+            </p>
+            <Image src={wallet} alt="wallet" height={80} width={80} />
+            <h3>Your position will appear here.</h3>
+          </div>
+
+          {/* //PRICE RANGE */}
+
+          <div className={styles.PoolAdd_box_price_right_range}>
+            <div className={styles.PoolAdd_box_price_right_range_box}>
+              <p>Min Price</p>
+              <input
+                type="number"
+                placeholder="0.000"
+                min="0.00"
+                step="0.001"
+                className={styles.PoolAdd_box_price_right_range_box_para}
+                onChange={(e) => setMinPrice(e.target.value)}
+              />
+              <p>
+                {"ETH"} per {"Select"}
+              </p>
+            </div>
+            {/* //MAX */}
+            <div className={styles.PoolAdd_box_price_right_range_box}>
+              <p>Max Price</p>
+              <input
+                type="number"
+                placeholder="0.000"
+                min="0.00"
+                step="0.001"
+                className={styles.PoolAdd_box_price_right_range_box_para}
+                onChange={(e) => setMaxPrice(e.target.value)}
+              />
+              <p>
+                {" "}
+                {"ETH"} per {"Select"}
+              </p>
+            </div>
+          </div>
+
+          {/* BUTTON */}
+        </div>)}
+
+
 
         <div className="flex justify-between p-1 rounded-[4px]">
           <span className="text-[16px] font-[Inter] font-bold">

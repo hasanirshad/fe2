@@ -28,3 +28,76 @@
   opacity: 0;
   display: none;
 }
+/* additional css below */
+
+.PoolAdd_box_price_right_box {
+  text-align: center;
+  line-height: 1.5;
+  margin-top: 1.5rem; /* Increased margin */
+  border: 1px solid #162a69; /* Add border for each widget */
+  border-radius: 0.5rem;
+  padding: 1.5rem; /* Increased padding */
+  background-color: #1e1e49eb; /* Match PoolConnect color */
+}
+
+.PoolAdd_box_price_right_box_para {
+  font-size: 1rem; /* Increased font size */
+  margin-bottom: 0.5rem;
+}
+.PoolAdd_box_price_right_box {
+  text-align: center;
+  line-height: 1.5;
+  margin-top: 1.5rem; /* Increased margin */
+  border: 1px solid #162a69; /* Add border for each widget */
+  border-radius: 0.5rem;
+  padding: 1.5rem; /* Increased padding */
+  background-color: #1e1e49eb; /* Match PoolConnect color */
+}
+
+.PoolAdd_box_price_right_box_para {
+  font-size: 1rem; /* Increased font size */
+  margin-bottom: 0.5rem;
+}
+
+.PoolAdd_box_price_right_range {
+  display: flex; /* Adjust for horizontal layout */
+  gap: 1.5rem; /* Increased gap */
+  justify-content: center;
+}
+
+.PoolAdd_box_price_right_range_box {
+  border-radius: 0.5rem;
+  border: 1px solid #162a69; /* Add border for each widget */
+  text-align: center;
+  line-height: 1.2;
+  outline: none; /* Remove border box of the whole */
+  padding: 1.5rem; /* Increased padding */
+  background-color: #1e1e49eb; /* Match PoolConnect color */
+}
+
+.PoolAdd_box_price_right_range_box_para small {
+  margin-inline: 1.5rem; /* Adjusted margin */
+  background-color: #1e1e49eb; /* Match PoolConnect color */
+  font-size: 1.4rem; /* Increased font size */
+  color: #ffffff; /* Changed color to white */
+  padding: 0.3rem 0.7rem; /* Increased padding */
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.PoolAdd_box_price_right_amount,
+.PoolAdd_box_price_right_button {
+  margin-top: 1.5rem; /* Increased margin */
+  display: grid;
+}
+
+.PoolAdd_box_price_right_button button {
+  background-color: #1e1e49eb; /* Match PoolConnect color */
+  border: 0;
+  outline: none;
+  padding: 0.7rem; /* Increased padding */
+  border-radius: 0.5rem;
+  font-size: 1.4rem; /* Increased font size */
+  font-weight: 700;
+  cursor: pointer;
+}
