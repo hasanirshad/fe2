@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import styles from "../Swap/SwapBodyConten.module.css";
 import { FaCog, FaExchangeAlt, FaMoneyBillAlt, FaUsers, FaArrowUp, FaArrowDown } from "react-icons/fa"; 
+import BuyComponent from "../BuyComponent/BuyComponent";
 import {
   SelectPare,
   Swap,
   Staking,
   SendComponent,
-  BuyComponent,
 } from "../";
 import Image from "next/image";
 import SmalllightBulb from "./smalllightbulb.png";
@@ -20,8 +20,8 @@ const tabData = [
   { key: "pool", label: "Pool", image: SmalllightBulb },
   { key: "swap", label: "Swap", image: SmalllightBulb },
   { key: "stake", label: "Stake", image: SmalllightBulb },
-  { key: "buy", label: "Sell", image: SmalllightBulb },
-  { key: "sell", label: "Buy", image: SmalllightBulb },
+  { key: "sell", label: "Sell", image: SmalllightBulb },
+  { key: "buy", label: "Buy", image: SmalllightBulb },
 ];
 
 const SwapBodyContent = () => {
@@ -36,9 +36,9 @@ const SwapBodyContent = () => {
         return <Swap />;
       case "stake":
         return <Staking />;
-      case "buy":
-        return <SendComponent />;
       case "sell":
+        return <SendComponent />;
+      case "buy":
         return <BuyComponent />;
       default:
         return <div />;
