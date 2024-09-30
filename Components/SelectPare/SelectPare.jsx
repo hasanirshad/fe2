@@ -36,7 +36,7 @@ const SelectPare = () => {
     <>
       <div
         className="w-[820px] h-[701px] rounded-[8px] p-6 flex flex-col border bg-[#1E1E49EB] border-[#162A69]"
-        style={{ height: "auto" }}
+        style={{ height: "auto", margin: "auto" }}
       >
         <span className="text-left mb-2">Select Pair</span>
         <div className="flex flex-row gap-2 mb-2">

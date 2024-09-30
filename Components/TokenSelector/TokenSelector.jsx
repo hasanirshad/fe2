@@ -37,7 +37,7 @@ const tokenData = [
   },
 ];
 
-const TokenSelector = () => {
+const TokenSelector = ({ selectedBoxHeight = 'auto', hideIcon = false, hideSymbol = false, hideName = false, hideSearch = false, selectedIconHeight = "60px", disabled=false}) => {
   const [tokens, setTokens] = useState(tokenData);
   const [selectedToken, setSelectedToken] = useState(tokens[0]);
   const [search, setSearch] = useState('');
@@ -89,12 +89,12 @@ const TokenSelector = () => {
   };
 
   return (
-    <div className={styles.container} ref={selectRef}>
+    <div className={styles.container} ref={selectRef} style={{height:selectedBoxHeight}}>
       <div 
         className={styles.selectTrigger} 
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => { disabled ? setIsOpen(false) : setIsOpen(!isOpen)}}
       >
-        <img src={selectedToken.icon} alt={selectedToken.name} className={styles.selectedIcon} />
+        {!hideIcon && <img src={selectedToken.icon} alt={selectedToken.name} className={styles.selectedIcon} style={{height:selectedIconHeight, width:selectedIconHeight}}/> }
         <span className={styles.selectedText}>
           {selectedToken.symbol}
         </span>
@@ -104,36 +104,36 @@ const TokenSelector = () => {
       {isOpen && (
         <div className={styles.selectContent}>        
           <div className={styles.tokenList}>
-            <span className={styles.selectatoken}>Select a Token</span>
-            <div className={styles.searchContainer}>
-              <img src="/Assets/search-normal.png" alt="search icon" className={styles.searchIcon} />
-              <input
+          {!hideSearch && <span className={styles.selectatoken}>Select a Token</span> }
+            {!hideSearch && <div className={styles.searchContainer}>
+            {!hideSearch && <img src="/Assets/search-normal.png" alt="search icon" className={styles.searchIcon} /> }
+            {!hideSearch && <input
                 type="text"
                 value={search}
                 onChange={handleInputChange}
                 placeholder="Search tokens..."
                 className={styles.searchInput}
-              />
-            </div>
+              />}
+            </div>}
             <div
+                key="ETH"
+                onClick={() => handleTokenSelect(token.symbol)}
                 className={styles.tokenItem}
               >
-                <Image src={eth} alt='ETH' className={styles.tokenIcon} />
-                <span className={styles.tokenName}>Ethereum</span>
-                <span className={styles.tokenSymbol}>ETH</span>
+                {!hideIcon && <Image src={eth} alt='ETH' className={styles.tokenIcon} />}
+                {!hideName && <span className={styles.tokenName}>Ethereum</span>}
+                {!hideSymbol && <span className={styles.tokenSymbol}>ETH</span>}
               </div>
-              <div>
               <Image src={stroke} alt='ETH' className={styles.stroke} />
-              </div>
             {tokens.map((token) => (
               <div
                 key={token.symbol}
                 onClick={() => handleTokenSelect(token.symbol)}
                 className={styles.tokenItem}
               >
-                <img src={token.icon} alt={token.name} className={styles.tokenIcon} />
-                <span className={styles.tokenName}>{token.name}</span>
-                <span className={styles.tokenSymbol}>{token.symbol}</span>
+              {!hideIcon && <img src={token.icon} alt={token.name} className={styles.tokenIcon} /> }
+              {!hideName && <span className={styles.tokenName}>{token.name}</span> }
+              {!hideSymbol && <span className={styles.tokenSymbol}>{token.symbol}</span> }
               </div>
             ))}
           </div>
