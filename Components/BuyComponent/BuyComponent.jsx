@@ -4,18 +4,25 @@ import { SlArrowDown } from "react-icons/sl";
 import Image from 'next/image'
 import { TbArrowsUpDown } from "react-icons/tb";
 import usaflag from '../../public/Assets/usa.png';
+import TokenSelector from '../TokenSelector/TokenSelector';
 
 const BuyComponent = () => {
   const [selectedAmount, setSelectedAmount] = useState('$0');
   const [amount, setAmount] = useState('');
   const [error, setError] = useState('');
   const [Show, setShow] = useState('Enter your Amount');
+  const [country, setCountry] = useState({ 
+    symbol: 'US',
+  name: 'US' ,
+  icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/73be894649968360ff8e74b283a096ca02a1e4478ec1a6b6582c409da5756759?placeholderIfAbsent=true&apiKey=45ca834082bd4e999875d6aa728b9960"
+});
 
   const countries = [
-    { code: 'US', name: 'US' },
-    { code: 'CA', name: 'CA' },
-    { code: 'GB', name: 'UK' },
-    
+    { 
+      symbol: 'US',
+    name: 'US' ,
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/73be894649968360ff8e74b283a096ca02a1e4478ec1a6b6582c409da5756759?placeholderIfAbsent=true&apiKey=45ca834082bd4e999875d6aa728b9960"
+  },
   ];
 
 
@@ -57,18 +64,18 @@ const BuyComponent = () => {
         <div className={styles.flexwithdropdown}>
           <p className={styles.textp1}>   You’re Buying </p>
           <div className={styles.dropdownContainer}>
-          <Image src={ usaflag } className={styles.img} alt='' />
-            <select
-              id="countries"
-              className={styles.dropdown}
-            >
-              {countries.map((country) => (
-                <option key={country.code} value={country.code}>
-                  {country.name}
-                </option>
-              ))}
-            </select>
-
+          <TokenSelector
+          tokenData={countries}
+          setselectedItemCallBack={setCountry}
+            selectedBoxHeight="30px" 
+            selectedIconHeight="20px"
+            hideIcon={false} 
+            hideSymbol={true}
+            hideName={true}
+            hideSearch={true}
+            disabled={false}
+            hideETH={true}
+          />
           </div>
         </div>
         <div className={styles.divinput}>

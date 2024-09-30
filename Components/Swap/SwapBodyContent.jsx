@@ -11,6 +11,7 @@ import {
   Staking,
   SendComponent,
   SelectPare,
+  Stake,
 } from "../";
 import BuyComponent from "../BuyComponent/BuyComponent";
 import Image from "next/image";
@@ -35,11 +36,11 @@ const SwapBodyContent = () => {
       case "stake":
         return <Staking></Staking>;
       case "buy":
-        return <SendComponent>Buy Content</SendComponent>;
+        return <SendComponent></SendComponent>;
       case "sell":
-        return <BuyComponent>Sell Content</BuyComponent>;
+        return <BuyComponent></BuyComponent>;
       default:
-        return <div>Swap Content</div>;
+        return <div></div>;
     }
   };
 
@@ -78,13 +79,13 @@ const SwapBodyContent = () => {
               className={activeTab === "buy" ? styles.activeTab : styles.tab}
               onClick={() => setActiveTab("buy")}
             >
-              Buy
+              Sell
             </button>
             <button
               className={activeTab === "sell" ? styles.activeTab : styles.tab}
               onClick={() => setActiveTab("sell")}
             >
-              Sell
+            Buy
             </button>
 
             {/* Settings Button */}

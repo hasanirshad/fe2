@@ -1,123 +1,84 @@
 .stakingContainer {
-  max-width: 600px;
+  max-width: 820px; /* Adjusted width */
   margin: 0 auto;
   padding: 20px;
   border-radius: 10px;
   background-color: rgba(30, 30, 73, 0.92);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 155px;
+  margin-top: 0px;
   margin-bottom: 100px;
   color: rgba(255, 255, 255, 0.8);
   font: 24px Outfit, sans-serif;
-  /* text-transform: uppercase; */
   display: flex;
   flex-direction: column;
-  background-color: rgba(30, 30, 73, 0.92);
-  border: 1px solid var(--Secondary-color, #162a69);
   overflow: hidden;
   position: relative;
-  min-height: 528px;
-  width: 100%;
-  padding: 24px 20px 6px;
-  font: 500 16px/28px Inter, -apple-system, Roboto, Helvetica, sans-serif;
-}
-.left {
-  margin-left: 105px;
-  display: flex;
-  flex-grow: 1;
-  justify-content: right;
-  position: absolute;
-  font: 500 16px/28px Inter, -apple-system, Roboto, Helvetica, sans-serif;
-}
-
-.right {
-  display: flex;
-  left: 300px;
-  margin-top: 0px;
-  flex-shrink: 0;
-  flex-wrap: wrap;
-  justify-content: right;
-  position: absolute;
-  font: 500 16px/28px Inter, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
 .title {
-  font: 500 16px/28px Inter, -apple-system, Roboto, Helvetica, sans-serif;
-  font-size: 32px;
+  font-size: 18px;
   font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
+  /* margin-bottom: 20px; */
+  text-align: left; /* Left align title */
 }
 
-.formGroup {
-  margin-bottom: 15px;
-  font: 500 16px/28px Inter, -apple-system, Roboto, Helvetica, sans-serif;
-}
-.formGroupFirstField {
-  font: 500 16px/28px Inter, -apple-system, Roboto, Helvetica, sans-serif;
-  margin-top: 65px;
-  margin-bottom: 15px;
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  margin-bottom: 16px; /* Space between rows */
 }
 
-.label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+.leftAlign {
+  flex: 1; /* Left column takes available space */
+  text-align: left; /* Left align text */
+  font-size: 18px;
+}
+
+.rightAlign {
+  flex: 1; /* Right column takes available space */
+  text-align: right; /* Right align text */
+  font-size: 20px;
+}
+
+.fullWidth {
+  width: 100%; /* Full width for labels */
+  font-size: 18px;
+  text-align: left;
 }
 
 .input {
   width: 100%;
   padding: 8px;
   border-radius: 5px;
-  border: 1px solid #08b0e3;
-  color: #162a69;
-  margin: 5px 0px 20px 5px;
-  border-width: 1px;
-  border-color: #164269;
-  border-style: outset;
+  border: 1px solid #0892D0;
+  color: white;
+  margin: 5px 0;
+  background-color: #162A69;
 }
 
 .radioInput {
-  gap: 16px;
-  &:hover {
-    color: skyblue; /* Light blue color */
-  }
-  border: 1px solid var(--Secondary-color, #162a69);
-  border-right: 1px solid #03b0f4; /* Darker blue border */
-  padding: 8px;
-  border: 0px;
-  width: 15%;
-  height: 2em;
-  margin: 15px 0px 0px 5px;
-  /* margin-left: 5px; */
+  margin-right: 8px; /* Adjust margin */
 }
 
 .checkbox {
   margin-left: 10px;
-  border: 0px;
-  width: 15%;
-  height: 2em;
-  margin: 15px 0px 0px 5px;
 }
 
 .stakeButton {
-  background-color: rgba(30, 30, 73, 0.92);
-  width: 100%;
-  padding: 10px;
-  border: none;
-  color: white;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 30px;
-  border-width: 1px;
-  border-color: #164269;
-  border-style: outset;
+  width: 150px;
+    padding: 10px;
+    border: none;
+    height: 47px;
+    background-color: #0892D0;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .stakeButton:hover {
-  /* background-color: rgb(3, 3, 57); */
-  color: skyblue;
+  color: skyblue; /* Change text color on hover */
 }
 
 .message {
@@ -125,4 +86,34 @@
   font-size: 14px;
   color: #ff4f4f;
   text-align: center;
+}
+
+.tokenPairContainer {
+  display: flex; /* Use flexbox to align token pairs in a row */
+  justify-content: space-between; /* Space out token pairs */
+  flex: 1; /* Allow token pair container to take available space */
+}
+
+.tokenPair {
+  display: flex;
+  align-items: center; /* Vertically center the text and icon */
+  justify-content: flex-start; /* Align items to the start */
+}
+
+.tokenPair label {
+  display: flex; /* Ensure label uses flexbox to align text and image */
+  align-items: center; /* Center items vertically */
+}
+.amountLabel {
+  font-size: 18px; /* Set font size to 18px for the amount label */
+  margin-bottom: 8px; /* Add some space below the label */
+}
+.inputandlabel{
+  width: 100%;
+  text-align: left;
+}
+.labelandradios{
+  width: 100%;
+    text-align: left;
+    font-size: 18px;
 }

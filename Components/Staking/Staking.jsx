@@ -56,66 +56,52 @@ const Staking = ({ provider }) => {
 
   return (
     <div className={styles.stakingContainer}>
-      <h2 className={styles.title}>Stake USDT to get Rewards in ETFs</h2>
-      <div>
-        <div className={styles.left}>
-          <label htmlFor="stakeToken">
-            Stake USDT &nbsp;
-            <Image src={USDTImage} height={24}></Image>
-            {/*<Image  height={24}></Image>*/}
-          </label>
-          {/* <input
-          type="text"
-          id="stakeToken"
-          value={stakeTokenAddress}
-          onChange={(e) => setStakeTokenAddress(e.target.value)}
-          placeholder="Enter Stake Token Address"
-          className={styles.input}
-        /> */}
+      {/* 1st Row */}
+      <div className={styles.row}>
+        <div className={styles.leftAlign}>
+          <h2 className={styles.title}>Stake USDT to get Rewards in ETFs</h2>
         </div>
-
-        <div className={styles.right}>
-          <label htmlFor="rewardToken">
-            Rewards in ETFs &nbsp;
-            <Image src={ETFSwapImage} height={24}></Image>
-          {/*<Image height={24}></Image>*/}
-          </label>
-          {/* <input
-          type="text"
-          id="rewardToken"
-          value={rewardTokenAddress}
-          onChange={(e) => setRewardTokenAddress(e.target.value)}
-          placeholder="Enter Reward Token Address"
-          className={styles.input}
-        /> */}
+        <div className={styles.rightAlign}>
+          <div className={styles.tokenPairContainer}>
+            <div className={styles.tokenPair}>
+              <label htmlFor="stakeToken">
+                Stake USDT &nbsp;
+                <Image src={USDTImage} height={24} />
+              </label>
+            </div>
+            <div className={styles.tokenPair}>
+              <label htmlFor="rewardToken">
+                Rewards in ETFs &nbsp;
+                <Image src={ETFSwapImage} height={24} />
+              </label>
+            </div>
+          </div>
         </div>
       </div>
-      {/* <div className={styles.formGroup}>
-        <label htmlFor="stakingContract">Staking Contract Address</label>
+
+      {/* 2nd Row */}
+      <div className={styles.row}>
+      <div className={styles.inputandlabel}>
+        <label htmlFor="amount" className={styles.amountLabel}>
+          Amount to Stake (USDT)
+        </label>
         <input
           type="text"
-          id="stakingContract"
-          value={stakingContractAddress}
-          onChange={(e) => setStakingContractAddress(e.target.value)}
-          placeholder="Enter Staking Contract Address"
-          className={styles.input}
-        />
-      </div> */}
-
-      <div className={styles.formGroupFirstField}>
-        <label htmlFor="amount">Amount to Stake (USDT)</label>
-        <input
-          type="number"
           id="amount"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
           placeholder="Enter Amount"
           className={styles.input}
         />
+        </div>
       </div>
 
-      <div className={styles.formGroup}>
-        <label htmlFor="duration">Staking Duration (in days)</label>
+      {/* 3rd Row */}
+      <div className={styles.row}>
+      <div className={styles.labelandradios}>
+      <label htmlFor="duration" className={styles.fullWidth}>
+          Staking Duration (in days)
+        </label>
         <div>
           <label>
             <input
@@ -151,24 +137,29 @@ const Staking = ({ provider }) => {
             70 Days
           </label>
         </div>
+        </div>
       </div>
 
-      <div className={styles.formGroup}>
-        <label htmlFor="autoReinvest">
-          Auto Reinvest
-          <input
-            type="checkbox"
-            id="autoReinvest"
-            checked={autoReinvest}
-            onChange={(e) => setAutoReinvest(e.target.checked)}
-            className={styles.checkbox}
-          />
-        </label>
+      {/* 4th Row */}
+      <div className={styles.row}>
+        <div className={styles.leftAlign}>
+          <label htmlFor="autoReinvest">
+            Auto Reinvest
+            <input
+              type="checkbox"
+              id="autoReinvest"
+              checked={autoReinvest}
+              onChange={(e) => setAutoReinvest(e.target.checked)}
+              className={styles.checkbox}
+            />
+          </label>
+        </div>
+        <div className={styles.rightAlign}>
+          <button className={styles.stakeButton} onClick={handleStake}>
+            Stake Tokens
+          </button>
+        </div>
       </div>
-
-      <button className={styles.stakeButton} onClick={handleStake}>
-        Stake Tokens
-      </button>
 
       {message && <p className={styles.message}>{message}</p>}
     </div>

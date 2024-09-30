@@ -23,6 +23,7 @@ import Swap from "../Components/Swap/Swap";
 import SwapTokenInfo from "../Components/Swap/SwapTokenInfo";
 import SwapInput from "../Components/Swap/SwapInput/SwapInput"
 import SelectPare from "./SelectPare/SelectPare.jsx";
+import Stake from "./Stake/Stake.jsx";
 
 export {
   HeroSection,
@@ -50,6 +51,7 @@ export {
   SwapTokenInfo,
   SelectPare,
   SwapInput,
+  Stake,
 };
 
 // This code has allowed us to run our application or front end interface by importing and exporting components
