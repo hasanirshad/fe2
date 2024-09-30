@@ -59,7 +59,7 @@ const SwapBodyContent = () => {
         <div className={styles.tabflex}>
           <div className={styles.tabs}>
             {tabData.map(({ key, label, image }) => (
-              <div key={key} className={styles.tabContainer}>
+              <div key={key} className={`${styles.tabContainer} ${styles.imageandnavitem}`}>
                 <button
                   className={activeTab === key ? styles.activeTab : styles.tab}
                   onClick={() => setActiveTab(key)}
