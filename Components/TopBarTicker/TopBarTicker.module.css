@@ -2,28 +2,29 @@
 .tickerContainer {
     width: 100%;
     overflow: hidden;
-    background-color: #60a5fa; /* Background color of the top bar */
-    padding: 6px;
+    background-color: #60a5fa;
+    padding: 7px;
     white-space: nowrap;
-    position: relative; /* Ensure proper positioning for the ticker */
-  }
-  
-  .tickerWrapper {
+    position: relative;
+}
+
+.tickerWrapper {
     display: flex;
     align-items: center;
     overflow: hidden;
-  }
-  
-  .ticker {
+    width: 100%; /* Ensure it occupies full width */
+}
+
+.ticker {
     display: flex;
     white-space: nowrap;
     will-change: transform;
-  }
-  
-  .tickerItem {
+    transition: transform 0.5s linear; /* Smooth transition for transform */
+}
+
+.tickerItem {
     margin-right: 50px; /* Space between each item */
     color: white;
     font-size: 18px;
     white-space: nowrap;
-  }
-  
+}
