@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderBar } from "./header";
+import { HeaderBar } from "./HeaderBar";
 import { OurMission } from "./ourMission";
 import { Trading } from "./Trading";
 import { RwaToken } from "./RwaToken";

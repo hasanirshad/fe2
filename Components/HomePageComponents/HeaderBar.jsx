@@ -2,7 +2,7 @@ import React from "react";
 
 import MobileMenu from "./MobileMenu.jsx";
 
-export const HeaderBar = () => {
+const HeaderBar = () => {
     return (
         <header className="text-xs">
   <nav className="bg-gradient-to-r from-[#1b3560] to-[#1f204a] pt-4 px-6 md:px-12">
@@ -55,7 +55,7 @@ export const HeaderBar = () => {
               Margin
             </a>
             <a
-              href="#"
+              href="/pool"
               className="block text-white hover:text-[#0892d0] transition-colors duration-300 py-1"
             >
               Futures
@@ -180,3 +180,5 @@ export const HeaderBar = () => {
 
     );
 }
+
+export default HeaderBar;

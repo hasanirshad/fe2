@@ -55,113 +55,102 @@ const Staking = ({ provider }) => {
   };
 
   return (
-    <div className={styles.stakingContainer}>
-      {/* 1st Row */}
-      <div className={styles.row}>
-        <div className={styles.leftAlign}>
-          <h2 className={styles.title}>Stake USDT to get Rewards in ETFs</h2>
-        </div>
-        <div className={styles.rightAlign}>
-          <div className={styles.tokenPairContainer}>
-            <div className={styles.tokenPair}>
-              <label htmlFor="stakeToken">
-                Stake USDT &nbsp;
-                <Image src={USDTImage} height={24} />
-              </label>
+    <div className={styles.container}>
+      <div className={styles.stakingContainer}>
+        {/* 1st Row */}
+        <div className={styles.row}>
+          <div className={styles.leftAlign}>
+            <h2 className={styles.title}>Stake USDT to get Rewards in ETFs</h2>
+          </div>
+          <div className={styles.rightAlign}>
+            <div className={styles.tokenPairContainer}>
+              <div className={styles.tokenPair}>
+                <label htmlFor="stakeToken">
+                  Stake USDT &nbsp;
+                  <Image src={USDTImage} height={24} />
+                </label>
+              </div>
+              <div className={styles.tokenPair}>
+                <label htmlFor="rewardToken">
+                  Rewards in ETFs &nbsp;
+                  <Image src={ETFSwapImage} height={24} />
+                </label>
+              </div>
             </div>
-            <div className={styles.tokenPair}>
-              <label htmlFor="rewardToken">
-                Rewards in ETFs &nbsp;
-                <Image src={ETFSwapImage} height={24} />
+          </div>
+        </div>
+
+        {/* 2nd Row */}
+        <div className={styles.row}>
+          <div className={styles.inputandlabel}>
+            <label htmlFor="amount" className={styles.amountLabel}>
+              Amount to Stake (USDT)
+            </label>
+            <input
+              type="text"
+              id="amount"
+              value={amount}
+              onChange={(e) => setAmount(e.target.value)}
+              placeholder="Enter Amount"
+              className={styles.input}
+            />
+          </div>
+        </div>
+
+        {/* 3rd Row */}
+        <div className={styles.row}>
+          <div className={styles.labelandradios}>
+            <label htmlFor="duration" className={styles.fullWidth}>
+              Staking Duration (in days)
+            </label>
+            <div>
+              <label>
+                <input
+                  type="radio"
+                  id="duration30"
+                  value="30"
+                  onChange={(e) => setDuration(e.target.value)}
+                  checked={duration === "30"}
+                  className={styles.radioInput}
+                />
+                30 Days
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  id="duration50"
+                  value="50"
+                  onChange={(e) => setDuration(e.target.value)}
+                  checked={duration === "50"}
+                  className={styles.radioInput}
+                />
+                50 Days
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  id="duration70"
+                  value="70"
+                  onChange={(e) => setDuration(e.target.value)}
+                  checked={duration === "70"}
+                  className={styles.radioInput}
+                />
+                70 Days
               </label>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* 2nd Row */}
-      <div className={styles.row}>
-      <div className={styles.inputandlabel}>
-        <label htmlFor="amount" className={styles.amountLabel}>
-          Amount to Stake (USDT)
-        </label>
-        <input
-          type="text"
-          id="amount"
-          value={amount}
-          onChange={(e) => setAmount(e.target.value)}
-          placeholder="Enter Amount"
-          className={styles.input}
-        />
-        </div>
+        {/* 4th Row */}
+        {message && <p className={styles.message}>{message}</p>}
       </div>
-
-      {/* 3rd Row */}
-      <div className={styles.row}>
-      <div className={styles.labelandradios}>
-      <label htmlFor="duration" className={styles.fullWidth}>
-          Staking Duration (in days)
-        </label>
-        <div>
-          <label>
-            <input
-              type="radio"
-              id="duration30"
-              value="30"
-              onChange={(e) => setDuration(e.target.value)}
-              checked={duration === "30"}
-              className={styles.radioInput}
-            />
-            30 Days
-          </label>
-          <label>
-            <input
-              type="radio"
-              id="duration50"
-              value="50"
-              onChange={(e) => setDuration(e.target.value)}
-              checked={duration === "50"}
-              className={styles.radioInput}
-            />
-            50 Days
-          </label>
-          <label>
-            <input
-              type="radio"
-              id="duration70"
-              value="70"
-              onChange={(e) => setDuration(e.target.value)}
-              checked={duration === "70"}
-              className={styles.radioInput}
-            />
-            70 Days
-          </label>
-        </div>
-        </div>
-      </div>
-
-      {/* 4th Row */}
-      <div className={styles.row}>
-        <div className={styles.leftAlign}>
-          <label htmlFor="autoReinvest">
-            Auto Reinvest
-            <input
-              type="checkbox"
-              id="autoReinvest"
-              checked={autoReinvest}
-              onChange={(e) => setAutoReinvest(e.target.checked)}
-              className={styles.checkbox}
-            />
-          </label>
-        </div>
+      <div className={styles.button}>
         <div className={styles.rightAlign}>
           <button className={styles.stakeButton} onClick={handleStake}>
             Stake Tokens
           </button>
         </div>
       </div>
-
-      {message && <p className={styles.message}>{message}</p>}
     </div>
   );
 };
