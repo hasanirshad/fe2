@@ -26,6 +26,7 @@ import SelectPare from "./SelectPare/SelectPare.jsx";
 import Stake from "./Stake/Stake.jsx";
 import SwapSell from "./Swap/SwapSell.jsx";
 import HeaderBar from "./HomePageComponents/HeaderBar.jsx";
+import TopBarTicker from "./TopBarTicker/TopBarTicker.jsx";
 
 export {
   HeroSection,
@@ -56,6 +57,7 @@ export {
   Stake,
   SwapSell,
   HeaderBar,
+  TopBarTicker,
 };
 
 // This code has allowed us to run our application or front end interface by importing and exporting components

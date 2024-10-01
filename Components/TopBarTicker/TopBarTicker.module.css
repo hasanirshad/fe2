@@ -1,0 +1,29 @@
+/* TopBarTicker.module.css */
+.tickerContainer {
+    width: 100%;
+    overflow: hidden;
+    background-color: #60a5fa; /* Background color of the top bar */
+    padding: 6px;
+    white-space: nowrap;
+    position: relative; /* Ensure proper positioning for the ticker */
+  }
+  
+  .tickerWrapper {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .ticker {
+    display: flex;
+    white-space: nowrap;
+    will-change: transform;
+  }
+  
+  .tickerItem {
+    margin-right: 50px; /* Space between each item */
+    color: white;
+    font-size: 18px;
+    white-space: nowrap;
+  }
+  
