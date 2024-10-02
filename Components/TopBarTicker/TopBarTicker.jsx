@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import styles from './TopBarTicker.module.css';
+import React, { useEffect, useRef, useState } from "react";
+import styles from "./TopBarTicker.module.css";
 
 const TopBarTicker = () => {
   const [items, setItems] = useState(new Map()); // Store the incoming data in a Map to avoid duplication based on the symbol 's'
@@ -8,27 +8,76 @@ const TopBarTicker = () => {
   const [scrollPosition, setScrollPosition] = useState(0); // Track the scroll position
 
   const fetchData = () => {
-    const socket = new WebSocket('wss://ws.finnhub.io?token=cru4cdpr01qi6bka9m50cru4cdpr01qi6bka9m5g');
+    const socket = new WebSocket(
+      "wss://ws.finnhub.io?token=cru4cdpr01qi6bka9m50cru4cdpr01qi6bka9m5g"
+    );
 
     // Subscribe to different symbols when WebSocket connection is opened
-    socket.addEventListener('open', function () {
-      socket.send(JSON.stringify({ 'type': 'subscribe', 'symbol': 'AAPL' }));
-      socket.send(JSON.stringify({ 'type': 'subscribe', 'symbol': 'BINANCE:BTCUSDT' }));
-      socket.send(JSON.stringify({ 'type': 'subscribe', 'symbol': 'IC MARKETS:1' }));
+    socket.addEventListener("open", function () {
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "SPY" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "IVV" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "VOO" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "VTI" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "QQQ" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "VEA" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "VUG" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "VTV" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "IEFA" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "AGG" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "BND" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "IWF" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "IJH" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "IJR" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "IEMG" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "VIG" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "VWO" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "VXUS" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "VGT" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "GLD" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "XLK" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "VO" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "IWM" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "RSP" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "ITOT" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "SCHD" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "TLT" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "BNDX" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "IWD" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "VB" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "VYM" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "EFA" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "IVW" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "VCIT" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "QUAL" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "SPLG" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "SCHX" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "SCHF" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "XLF" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "XLV" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "VEU" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "VT" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "IXUS" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "MUB" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "VV" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "VNQ" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "IWB" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "IWR" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "JEPI" }));
+      socket.send(JSON.stringify({ type: "subscribe", symbol: "VCSH" }));
     });
 
     // Listen for incoming messages
-    socket.addEventListener('message', function (event) {
+    socket.addEventListener("message", function (event) {
       const data = JSON.parse(event.data);
 
       // If the message is of type 'trade' and contains data
-      if (data.type === 'trade' && data.data) {
+      if (data.type === "trade" && data.data) {
         setItems((prevItems) => {
           const updatedItems = new Map(prevItems);
           data.data.forEach((item) => {
             const { s, p } = item;
             // Update the Map using the symbol 's' as the key
-            updatedItems.set(s, `${s.replace(':', '-')}: ${p}`);
+            updatedItems.set(s, `${s.replace(":", "-")}: ${p}`);
           });
           return updatedItems;
         });
@@ -91,7 +140,11 @@ const TopBarTicker = () => {
   return (
     <div className={styles.tickerContainer} ref={containerRef}>
       <div className={styles.tickerWrapper}>
-        <div className={styles.ticker} ref={tickerRef} style={{ transform: `translateX(${scrollPosition}px)` }}>
+        <div
+          className={styles.ticker}
+          ref={tickerRef}
+          style={{ transform: `translateX(${scrollPosition}px)` }}
+        >
           {[...items.values()].map((item, index) => (
             <span key={index} className={styles.tickerItem}>
               {item}
