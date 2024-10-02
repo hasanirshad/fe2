@@ -161,7 +161,7 @@ const Model = ({ isOpenModel }) => {
           </div>
           <Image src={Rectangle1} alt="Rectangle" width={100} height={1} />
           <div className={Style.Model_Box_Rectangle1_Inner}>
-            <Image src={Rectangle2} alt="Rectangle2" width={700} height={50} />
+            <Image className={Style.rectangle2} src={Rectangle2} alt="Rectangle2" width={700} height={50} />
             <div className={Style.Model_Box_Rectangle1_Inner_RightArrow}>
               <Image src={ArrowRight} alt="Right" width={20} height={20} />
             </div>
@@ -193,7 +193,7 @@ const Model = ({ isOpenModel }) => {
           <Image src={ArrowUpDown} alt="UpDown" width={15} height={25} />
         </div>
         <p className={Style.Model_Box_Para2}>
-          Available (4)
+          Available ({wallets.length})
         </p>
         <div className={Style.Model_Box_Wallet}>
           {wallets.map((el, i) => (
