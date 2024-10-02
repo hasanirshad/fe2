@@ -18,7 +18,6 @@ function MyApp({ Component, pageProps }) {
     <div className={`${inter.className} ${outfit.className}`}>
     <TopBarTicker items={tickerItems} />
       <HeaderBar />
-      <Model setOpenModel={true} />
       <Component {...pageProps} />
       <FooterSection></FooterSection>
     </div>

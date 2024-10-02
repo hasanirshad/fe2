@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Style from './Model.module.css';
 import Close from "../../public/Assets/Assets-Daulat/Close.png";
@@ -18,9 +18,11 @@ import ArrowUpDown from "../../public/Assets/ArrowUpDown.png";
 // import WalletConnectProvider from "@walletconnect/web3-provider";
 // import { Web3Provider } from "@ethersproject/providers";
 
-const Model = ({ setOpenModel }) => {
+const Model = ({ isOpenModel }) => {
   const [provider, setProvider] = useState(null);
-
+  const [openModal, setOpenModal] = useState(isOpenModel);
+  
+  useEffect(()=>{console.log("re-rendered Modal", isOpenModel)}, isOpenModel);
   // Function to connect MetaMask
   const connectMetaMask = async () => {
     const { ethereum } = window;
@@ -57,8 +59,18 @@ const Model = ({ setOpenModel }) => {
     { name: "MetaMask", image: MetaMask, connect: connectMetaMask },
     { name: "Coinbase", image: Coinbase, connect: openCoinbaseSignUpPage },
     { name: "Trust", image: Wallet, connect: openTrustWalletExtension },
-    { name: "WalletConnect", image: WalletConnect, connect: openWalletConnectWebsite }, // Modified here
+    { name: "WalletConnect", image: WalletConnect, connect: openWalletConnectWebsite },
   ];
+
+  // Close modal handler
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
+
+  // Render nothing if openModal is false
+  if (!openModal) {
+    return <div></div>;
+  }
 
   return (
     <div className={Style.Model}>
@@ -86,7 +98,7 @@ const Model = ({ setOpenModel }) => {
               alt="close"
               width={40}
               height={40}
-              onClick={() => setOpenModel(false)}
+              onClick={handleCloseModal} // Use the handler to close the modal
               style={{ cursor: 'pointer' }}
             />
           </div>
@@ -111,16 +123,13 @@ const Model = ({ setOpenModel }) => {
             <div
               key={i}
               className={Style.Model_Box_Wallet_Item}
-              onClick={el.connect} // Ensure the correct connect function is triggered
+              onClick={el.connect}
             >
               <Image src={el.image} alt={el.name} width={30} height={30} />
               <p>{el.name}</p>
             </div>
           ))}
         </div>
-        {/* <p className={Style.Model_Box_Para}>
-          By connecting a wallet, you agree to UniSwap Lab's <br /> terms of service and consent to its Privacy Policy.
-        </p> */}
         <div className={Style.Model_Box_Logo}>
           <Image src={ETFSwapLogo} alt="ETFSwap Logo" width={240} height={240} />
         </div>

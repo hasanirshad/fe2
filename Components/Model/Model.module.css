@@ -5,6 +5,8 @@
   align-items: center;
   justify-content: center;
   z-index: 999999999;
+  margin-left: 20%;
+  color: white;
 }
 
 /* The main box */
@@ -18,7 +20,7 @@
   box-sizing: border-box;
   position: relative;
   margin-top: 6rem;
-  margin-left: 30.05rem;
+  /* margin-left: 30.05rem; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Add shadow effect */
 }
 
@@ -159,7 +161,7 @@
 
 .Model_Box_Logo {
   width: 1000px;
-  height: 1000px;
+  /* height: 1000px; */
   display: flex;
   justify-content: center;
   margin-top: 4rem;

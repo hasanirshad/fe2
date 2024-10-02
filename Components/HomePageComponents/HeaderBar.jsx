@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import MobileMenu from "./MobileMenu.jsx";
+import { Model } from '../index.js';
 
 const HeaderBar = () => {
+  const [modal, setModal] = useState(false);
+  const [modalKey, setModalKey] = useState(Date.now());
     return (
         <header className="text-xs">
+        <Model key={`${modal}-${modalKey}`} isOpenModel={modal} />
   <nav className="bg-gradient-to-r from-[#1b3560] to-[#1f204a] pt-4 px-6 md:px-12">
     <div className="flex items-center justify-between">
       <a href="#" className="text-white text-lg font-bold">
@@ -146,12 +150,12 @@ const HeaderBar = () => {
         >
           Stake
         </a>
-        <a
-          href="#"
+        <button
           className="text-white hover:text-sky-500 transition-colors duration-300 border-l pl-2 border-white"
+          onClick={()=> {setModal(true);console.log("Modal Opened", modal, Date.now()); setModalKey(Date.now())}}
         >
           Connect Wallet
-        </a>
+        </button>
         <img src="/assets/svgs/right-Arrow.svg" alt="" />
         <a
           href="#"
