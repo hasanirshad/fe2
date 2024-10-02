@@ -9,6 +9,7 @@ import SelectPare from "./SelectPare/SelectPare.jsx";
 import SwapSell from "./Swap/SwapSell.jsx";
 import HeaderBar from "./HomePageComponents/HeaderBar.jsx";
 import TopBarTicker from "./TopBarTicker/TopBarTicker.jsx";
+import Model from "./Model/Model.jsx";
 
 export {
   FooterSection,
@@ -22,6 +23,7 @@ export {
   SwapSell,
   HeaderBar,
   TopBarTicker,
+  Model,
 };
 
 // This code has allowed us to run our application or front end interface by importing and exporting components

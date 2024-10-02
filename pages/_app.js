@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/globals.css";
 import "../Components/HomePageComponents/HomePageIndex.css";
 import { Inter, Outfit } from "next/font/google";
-import { FooterSection, HeaderSection, HeaderBar, TopBarTicker } from "../Components/index";
+import { FooterSection, HeaderBar, TopBarTicker, Model } from "../Components/index";
 
 const inter = Inter({ subsets: ["latin"] });
 const outfit = Outfit({ subsets: ["latin"] });
@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps }) {
     <div className={`${inter.className} ${outfit.className}`}>
     <TopBarTicker items={tickerItems} />
       <HeaderBar />
+      <Model setOpenModel={true} />
       <Component {...pageProps} />
       <FooterSection></FooterSection>
     </div>
