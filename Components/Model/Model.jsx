@@ -105,39 +105,6 @@ const Model = ({ isOpenModel }) => {
       console.error(err);
     }
   };
-  
-  // // Function to connect MetaMask
-  // const connectMetaMask = async () => {
-  //   const { ethereum } = window;
-  //   if (ethereum && ethereum.isMetaMask) {
-  //     try {
-  //       await ethereum.request({ method: 'eth_requestAccounts' });
-  //       const signer = new ethers.providers.Web3Provider(ethereum).getSigner();
-  //       console.log("Connected with MetaMask:", await signer.getAddress());
-  //     } catch (error) {
-  //       console.error("MetaMask connection error:", error);
-  //     }
-  //   } else {
-  //     alert("MetaMask is not installed. Please install it to continue.");
-  //   }
-  // };
-
-  // // Function to open Coinbase sign-up page
-  // const openCoinbaseSignUpPage = () => {
-  //   window.open('https://www.coinbase.com/signup', '_blank');
-  // };
-
-  // // Function to open Trust Wallet website
-  // const openTrustWalletExtension = () => {
-  //   const trustWalletUrl = 'https://trustwallet.com/';
-  //   window.open(trustWalletUrl, '_blank');
-  // };
-
-  // // Function to open WalletConnect website
-  // const openWalletConnectWebsite = () => {
-  //   window.open('https://walletconnect.com/', '_blank');
-  // };
-
 
   // Close modal handler
   const handleCloseModal = () => {
