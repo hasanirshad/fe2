@@ -18,7 +18,7 @@ const HeaderBar = () => {
       </a>
       <div className="hidden items-center space-x-6 md:flex">
         <a
-          href="#"
+          href="/home"
           className="text-white hover:text-sky-500 transition-colors duration-300"
         >
           Home
@@ -43,13 +43,13 @@ const HeaderBar = () => {
           </button>
           <div className="absolute z-10 bg-[#000000] rounded-md shadow-lg py-2 px-4 hidden group-hover:block">
             <a
-              href="#"
+              href="/pool"
               className="block text-white hover:text-[#0892d0] transition-colors duration-300 py-1"
             >
               Spot
             </a>
             <a
-              href="#"
+              href="/pool"
               className="block text-white hover:text-[#0892d0] transition-colors duration-300 py-1"
             >
               Margin
@@ -82,19 +82,19 @@ const HeaderBar = () => {
           </button>
           <div className="absolute z-10 bg-[#161C24] rounded-md shadow-lg py-2 px-4 hidden group-hover:block">
             <a
-              href="#"
+              href="/pool"
               className="block text-white hover:text-sky-500 transition-colors duration-300 py-1"
             >
               NFTs
             </a>
             <a
-              href="#"
+              href="/pool"
               className="block text-white hover:text-sky-500 transition-colors duration-300 py-1"
             >
               DeFi
             </a>
             <a
-              href="#"
+              href="/pool"
               className="block text-white hover:text-sky-500 transition-colors duration-300 py-1"
             >
               Earn
@@ -121,19 +121,19 @@ const HeaderBar = () => {
           </button>
           <div className="absolute z-10 bg-[#161C24] rounded-md shadow-lg py-2 px-4 hidden group-hover:block">
             <a
-              href="#"
+              href="/pool"
               className="block text-white hover:text-sky-500 transition-colors duration-300 py-1"
             >
               Liquidity
             </a>
             <a
-              href="#"
+              href="/pool"
               className="block text-white hover:text-sky-500 transition-colors duration-300 py-1"
             >
               Staking
             </a>
             <a
-              href="#"
+              href="/pool"
               className="block text-white hover:text-sky-500 transition-colors duration-300 py-1"
             >
               Farming
@@ -141,7 +141,7 @@ const HeaderBar = () => {
           </div>
         </div>
         <a
-          href="#"
+          href="/pool"
           className="text-white hover:text-sky-500 transition-colors duration-300"
         >
           Stake

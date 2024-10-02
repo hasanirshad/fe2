@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import styles from "../Swap/SwapBodyConten.module.css";
 import { FaCog, FaExchangeAlt, FaMoneyBillAlt, FaUsers, FaArrowUp, FaArrowDown } from "react-icons/fa"; 
-import BuyComponent from "../BuyComponent/BuyComponent";
 import {
   SelectPare,
   Swap,
   Staking,
-  SendComponent,
   SwapSell
 } from "../";
 import Image from "next/image";

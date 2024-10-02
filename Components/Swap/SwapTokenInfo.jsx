@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../SwapComponent/SwapComponent.module.css";
+import styles from "./SwapComponent.module.css";
 import Image from "next/image";
 
 
