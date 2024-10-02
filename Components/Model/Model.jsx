@@ -21,46 +21,123 @@ import ArrowUpDown from "../../public/Assets/ArrowUpDown.png";
 const Model = ({ isOpenModel }) => {
   const [provider, setProvider] = useState(null);
   const [openModal, setOpenModal] = useState(isOpenModel);
-  
-  useEffect(()=>{console.log("re-rendered Modal", isOpenModel)}, isOpenModel);
-  // Function to connect MetaMask
-  const connectMetaMask = async () => {
-    const { ethereum } = window;
-    if (ethereum && ethereum.isMetaMask) {
-      try {
-        await ethereum.request({ method: 'eth_requestAccounts' });
-        const signer = new ethers.providers.Web3Provider(ethereum).getSigner();
-        console.log("Connected with MetaMask:", await signer.getAddress());
-      } catch (error) {
-        console.error("MetaMask connection error:", error);
-      }
+  const [wallets, setWallets] = useState([]);
+
+  let metaMask, coinbase, trust;
+// const walletMenu = [
+  //   { name: "MetaMask", image: MetaMask, connect: connectMetaMask },
+  //   { name: "Coinbase", image: Coinbase, connect: openCoinbaseSignUpPage },
+  //   { name: "Trust", image: Wallet, connect: openTrustWalletExtension },
+  //   { name: "WalletConnect", image: WalletConnect, connect: openWalletConnectWebsite },
+  // ];
+  useEffect(() => {
+    const detected = [];
+
+    // Find MetaMask explicitly, avoid conflicts
+    if (window.ethereum && window.ethereum.providers) {
+      metaMask = window.ethereum.providers.find(
+        (p) => p.isMetaMask && !p.isTrust
+      );
+      coinbase = window.ethereum.providers.find((p) => p.isCoinbaseWallet);
+      trust = window.ethereum.providers.find((p) => p.isTrust);
+
+      if (metaMask)
+        detected.push({ name: "MetaMask", image: MetaMask, connect: connectMetaMask });
+      if (coinbase)
+        detected.push({ name: "Coinbase", image: Coinbase, connect: connectCoinbase });
+      if (trust) detected.push({ name: "Trust Wallet", image: Wallet, connect: connectTrust });
     } else {
-      alert("MetaMask is not installed. Please install it to continue.");
+      // Single provider case
+      if (window.ethereum && window.ethereum.isMetaMask) {
+        metaMask = window.ethereum;
+        detected.push({ name: "MetaMask", image: MetaMask, connect: connectMetaMask });
+      }
+      if (window.ethereum && window.ethereum.isCoinbaseWallet) {
+        coinbase = window.ethereum;
+        detected.push({ name: "Coinbase", image: Coinbase, connect: connectCoinbase });
+      }
+      if (window.ethereum && window.ethereum.isTrust) {
+        trust = window.ethereum;
+        detected.push({ name: "Trust Wallet", image: Wallet, connect: connectTrust });
+      }
+    }
+
+    setWallets(detected);
+  }, []);
+
+  const connectMetaMask = async () => {
+    try {
+      if (metaMask) {
+        await metaMask.request({ method: "eth_requestAccounts" });
+        alert("MetaMask connected");
+      } else {
+        alert("MetaMask not found");
+      }
+    } catch (err) {
+      console.error(err);
     }
   };
 
-  // Function to open Coinbase sign-up page
-  const openCoinbaseSignUpPage = () => {
-    window.open('https://www.coinbase.com/signup', '_blank');
+  // Coinbase connection
+  const connectCoinbase = async () => {
+    try {
+      if (coinbase) {
+        await coinbase.request({ method: "eth_requestAccounts" });
+        alert("Coinbase Wallet connected");
+      } else {
+        alert("Coinbase Wallet not found");
+      }
+    } catch (err) {
+      console.error(err);
+    }
   };
 
-  // Function to open Trust Wallet website
-  const openTrustWalletExtension = () => {
-    const trustWalletUrl = 'https://trustwallet.com/';
-    window.open(trustWalletUrl, '_blank');
+  // Trust Wallet connection
+  const connectTrust = async () => {
+    try {
+      if (trust) {
+        await trust.request({ method: "eth_requestAccounts" });
+        alert("Trust Wallet connected");
+      } else {
+        alert("Trust Wallet not found");
+      }
+    } catch (err) {
+      console.error(err);
+    }
   };
+  
+  // // Function to connect MetaMask
+  // const connectMetaMask = async () => {
+  //   const { ethereum } = window;
+  //   if (ethereum && ethereum.isMetaMask) {
+  //     try {
+  //       await ethereum.request({ method: 'eth_requestAccounts' });
+  //       const signer = new ethers.providers.Web3Provider(ethereum).getSigner();
+  //       console.log("Connected with MetaMask:", await signer.getAddress());
+  //     } catch (error) {
+  //       console.error("MetaMask connection error:", error);
+  //     }
+  //   } else {
+  //     alert("MetaMask is not installed. Please install it to continue.");
+  //   }
+  // };
 
-  // Function to open WalletConnect website
-  const openWalletConnectWebsite = () => {
-    window.open('https://walletconnect.com/', '_blank');
-  };
+  // // Function to open Coinbase sign-up page
+  // const openCoinbaseSignUpPage = () => {
+  //   window.open('https://www.coinbase.com/signup', '_blank');
+  // };
 
-  const walletMenu = [
-    { name: "MetaMask", image: MetaMask, connect: connectMetaMask },
-    { name: "Coinbase", image: Coinbase, connect: openCoinbaseSignUpPage },
-    { name: "Trust", image: Wallet, connect: openTrustWalletExtension },
-    { name: "WalletConnect", image: WalletConnect, connect: openWalletConnectWebsite },
-  ];
+  // // Function to open Trust Wallet website
+  // const openTrustWalletExtension = () => {
+  //   const trustWalletUrl = 'https://trustwallet.com/';
+  //   window.open(trustWalletUrl, '_blank');
+  // };
+
+  // // Function to open WalletConnect website
+  // const openWalletConnectWebsite = () => {
+  //   window.open('https://walletconnect.com/', '_blank');
+  // };
+
 
   // Close modal handler
   const handleCloseModal = () => {
@@ -119,7 +196,7 @@ const Model = ({ isOpenModel }) => {
           Available (4)
         </p>
         <div className={Style.Model_Box_Wallet}>
-          {walletMenu.map((el, i) => (
+          {wallets.map((el, i) => (
             <div
               key={i}
               className={Style.Model_Box_Wallet_Item}
