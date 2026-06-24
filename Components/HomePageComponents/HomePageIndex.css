@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cover-img {
+  background-image: url(../../Assets/HomePageAssets/cover-img.jpg);
+  object-fit: cover;
+  background-position: center;
+}
+
+.chart-line {
+  height: 25px;
+  width: 50%;
+  max-width: 780px;
+  border: 2px solid #6b7280;
+  border-bottom: none;
+  background-color: transparent; /* Tailwind gray-500 */
+  position: relative;
+}
+.chart-line::before,
+.chart-line::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 10px;
+  height: 10px;
+  background-color: #6b7280; /* Tailwind gray-500 */
+  border-radius: 50%;
+}
+.chart-line::before {
+  left: -5px;
+}
+.chart-line::after {
+  right: -5px;
+}
+/* Other */
+.custom-shape {
+  background-image: url(../../public/svgs/circle.svg);
+  object-fit: cover;
+  width: 800px;
+  background-position: center;
+  background-color: white;
+  background-repeat: no-repeat;
+  border-radius: 10%;
+}
+.custom-shape-2 {
+  /* background-image: url(/assets/img/Screenshot\ 2024-08-28\ 133249.png); */
+}
+
+.line {
+  position: absolute;
+  width: 2px;
+  background: #e5e7eb;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.line-connector {
+  position: relative;
+  width: 2px;
+  background: #e5e7eb;
+}
+/* .line-connector::before {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 20px;
+      border-left: 2px solid #E5E7EB;
+      border-bottom: 2px solid #E5E7EB;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      background: white;
+    } */
+.logo-mask::before {
+  background-color: aqua;
+}
+
+.faq-item {
+  transition: max-height 0.3s ease-in-out;
+}
+
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+.dropdown-content.open {
+  max-height: 500px; /* Adjust this value based on your content */
+}
+
+/* Card Img */
+.cord-img {
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 20%;
+}
+
+bg-lines {
+  background-image: url(../../public/HomePageSvgs/circle.svg);
+  top: 0;
+}
+.footer {
+  /* background-image: url(img/Footer\ Background.png); */
+  background-size: cover;
+  object-fit: cover;
+}
+.hidden {
+  display: none;
+}

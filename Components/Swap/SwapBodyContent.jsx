@@ -1,34 +1,36 @@
 import React, { useState } from "react";
-import styles from "./BodyContent.module.css";
-import { SendComponent } from "../";
-import BuyComponent from "../BuyComponent/BuyComponent";
+import styles from "../Swap/SwapBodyConten.module.css";
 import { FaCog } from "react-icons/fa"; // Importing a settings icon from react-icons
+import { Inter } from "next/font/google";
 //imported from the components we created
 import {
   AddLiquidity,
   SwapComponent,
   StakingComponent,
   PoolAdd,
+  Swap,
   Staking,
+  SendComponent,
   SelectPare,
 } from "../";
+import BuyComponent from "../BuyComponent/BuyComponent";
 
-const BodyContent = () => {
+const SwapBodyContent = () => {
   const [activeTab, setActiveTab] = useState("pool");
   const [showSettings, setShowSettings] = useState(false); // State to handle the popup visibility
 
   const renderContent = () => {
     switch (activeTab) {
       case "pool":
-        return <PoolAdd></PoolAdd>;
+        return <SelectPare></SelectPare>;
       case "swap":
-        return <SwapComponent></SwapComponent>;
+        return <Swap></Swap>;
       case "stake":
         return <Staking></Staking>;
-      case "Send":
-        return <SendComponent>Send Content</SendComponent>;
-      case "Buy":
-        return <BuyComponent>Buy Content</BuyComponent>;
+      case "buy":
+        return <SendComponent>Buy Content</SendComponent>;
+      case "sell":
+        return <BuyComponent>Sell Content</BuyComponent>;
       default:
         return <div>Swap Content</div>;
     }
@@ -57,16 +59,16 @@ const BodyContent = () => {
           Stake
         </button>
         <button
-          className={activeTab === "Send" ? styles.activeTab : styles.tab}
-          onClick={() => setActiveTab("Send")}
-        >
-          Send
-        </button>
-        <button
-          className={activeTab === "Buy" ? styles.activeTab : styles.tab}
-          onClick={() => setActiveTab("Buy")}
+          className={activeTab === "buy" ? styles.activeTab : styles.tab}
+          onClick={() => setActiveTab("buy")}
         >
           Buy
+        </button>
+        <button
+          className={activeTab === "sell" ? styles.activeTab : styles.tab}
+          onClick={() => setActiveTab("sell")}
+        >
+          Sell
         </button>
 
         {/* Settings Button */}
@@ -95,4 +97,4 @@ const BodyContent = () => {
   );
 };
 
-export default BodyContent;
+export default SwapBodyContent;

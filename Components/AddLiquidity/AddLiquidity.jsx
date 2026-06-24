@@ -1,7 +1,7 @@
 import { React } from "react";
 import styles from "./AddLiquidity.module.css";
 import FeeTierCard from "./FeeTierCard";
-import PriceInput from "./PriceInput";
+// import PriceInput from "./PriceInput";
 
 const AddLiquidity = () => {
   const feeTiers = [
